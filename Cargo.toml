@@ -1,0 +1,2 @@
+[workspace]
+members = ["quic_actor", "udp_client"]

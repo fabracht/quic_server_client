@@ -1,0 +1,33 @@
+[package]
+name = "quic-actor"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix= "*"
+actix-rt= "*"
+log4rs= "*"
+log= "*"
+quiche={git="https://github.com/cloudflare/quiche.git"}
+thiserror= "*"
+ring= "*"
+dashmap = "5.2"
+bytes= "*"
+[dependencies.futures-util]
+features = ["sink", "io"]
+version= "0.3.21"
+
+
+[dependencies.tokio]
+features = ["full", "sync"]
+version = "1.14.0"
+
+[dependencies.tokio-util]
+features = ["net", "codec"]
+version = "0.7.1"
+
+[dependencies.uuid]
+features = ["v4", "serde"]
+version = "1.0.0"
