@@ -1,2 +1,22 @@
 2022-05-09 20:59:59 - INFO: listening on 127.0.0.1:4480 -> quic_actor/src/main.rs-35
 2022-05-09 20:59:59 - INFO: Got actor address! -> quic_actor/src/main.rs-41
+2022-05-09 21:05:30 - INFO: listening on 127.0.0.1:4480 -> quic_actor/src/main.rs-35
+2022-05-09 21:05:30 - INFO: Got actor address! -> quic_actor/src/main.rs-41
+2022-05-09 21:05:41 - INFO: Got packet Some(Initial version=1 dcid=0574b7db68b5b32a5f705e12ed411147 scid=60431038452e6a075385b77166d754622adfc434 token=) -> quic_actor/src/udpactor.rs-136
+2022-05-09 21:05:41 - WARN: New Client -> quic_actor/src/udpactor.rs-150
+2022-05-09 21:05:41 - WARN: Doing stateless retry -> quic_actor/src/udpactor.rs-175
+2022-05-09 21:05:41 - INFO: Successfuly sent 89 bytes -> quic_actor/src/udpactor.rs-70
+2022-05-09 21:05:41 - INFO: Got packet Some(Initial version=1 dcid=0d433ee843cffad7f427dcb69ecb5fc829a17748 scid=60431038452e6a075385b77166d754622adfc434 token=7175696368657f0000010574b7db68b5b32a5f705e12ed411147) -> quic_actor/src/udpactor.rs-136
+2022-05-09 21:05:41 - WARN: New Client -> quic_actor/src/udpactor.rs-150
+2022-05-09 21:05:41 - INFO: New connection: dcid=0d433ee843cffad7f427dcb69ecb5fc829a17748 scid=0d433ee843cffad7f427dcb69ecb5fc829a17748 -> quic_actor/src/udpactor.rs-211
+2022-05-09 21:05:41 - ERROR: 0d433ee843cffad7f427dcb69ecb5fc829a17748 recv failed: TlsFail -> quic_actor/src/udpactor.rs-243
+2022-05-09 21:10:48 - INFO: listening on 127.0.0.1:4480 -> quic_actor/src/main.rs-36
+2022-05-09 21:10:48 - INFO: Got actor address! -> quic_actor/src/main.rs-42
+2022-05-09 21:10:52 - INFO: Got packet Some(Initial version=1 dcid=ac13b88877aa25f5ba00c4bae0a0c35d scid=9cbc8c2e7b192c68e71ce9b34b9ff0d592cbbe31 token=) -> quic_actor/src/udpactor.rs-136
+2022-05-09 21:10:52 - WARN: New Client -> quic_actor/src/udpactor.rs-150
+2022-05-09 21:10:52 - WARN: Doing stateless retry -> quic_actor/src/udpactor.rs-175
+2022-05-09 21:10:52 - INFO: Successfuly sent 89 bytes -> quic_actor/src/udpactor.rs-70
+2022-05-09 21:10:52 - INFO: Got packet Some(Initial version=1 dcid=2d23d4326af9b642e57d7f8042182f34afeb0753 scid=9cbc8c2e7b192c68e71ce9b34b9ff0d592cbbe31 token=7175696368657f000001ac13b88877aa25f5ba00c4bae0a0c35d) -> quic_actor/src/udpactor.rs-136
+2022-05-09 21:10:52 - WARN: New Client -> quic_actor/src/udpactor.rs-150
+2022-05-09 21:10:52 - INFO: New connection: dcid=2d23d4326af9b642e57d7f8042182f34afeb0753 scid=2d23d4326af9b642e57d7f8042182f34afeb0753 -> quic_actor/src/udpactor.rs-211
+2022-05-09 21:10:52 - INFO: 2d23d4326af9b642e57d7f8042182f34afeb0753 processed 1200 bytes -> quic_actor/src/udpactor.rs-247

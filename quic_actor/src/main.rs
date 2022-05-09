@@ -22,7 +22,8 @@ fn main() -> Result<(), Box<dyn Error + Sync + Send + 'static>> {
 
     config.load_cert_chain_from_pem_file("./cert.pem")?;
     config.load_priv_key_from_pem_file("./key.pem")?;
-    config.set_application_protos(b"\x0ahq-interop\x05hq-29\x05hq-28\x05hq-27\x08http/0.9")?;
+    // config.set_application_protos(b"\x0ahq-interop\x05hq-29\x05hq-28\x05hq-27\x08http/0.9")?;
+    config.set_application_protos(quiche::h3::APPLICATION_PROTOCOL)?;
     config.verify_peer(false);
     config.enable_early_data();
     let _rng = SystemRandom::new();
