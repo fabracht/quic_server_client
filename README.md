@@ -13,4 +13,3 @@ cargo run --bin quic-actor
 ```bash
 cargo run --bin udp-client
 ```
-### OBS: TLS fails, so this code is non-functional.

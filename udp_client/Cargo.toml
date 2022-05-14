@@ -11,3 +11,5 @@ quiche={git="https://github.com/cloudflare/quiche.git"}
 ring= "*"
 log= "*"
 env_logger= "*"
+url= "*"
+mio= "*"

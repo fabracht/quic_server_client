@@ -7,6 +7,8 @@ use dashmap::DashMap;
 use quiche::ConnectionId;
 use ring::hmac::Key;
 use ring::rand::SystemRandom;
+use std::borrow::BorrowMut;
+use std::collections::HashMap;
 use std::net::SocketAddr;
 
 use std::sync::Arc;
@@ -24,8 +26,14 @@ type UdpSink = SinkWrite<
     SplitSink<UdpFramed<codec::BytesCodec>, (String, SocketAddr)>,
 >;
 
+struct PartialResponse {
+    body: Vec<u8>,
+
+    written: usize,
+}
 pub struct Client {
-    pub conn: std::pin::Pin<Box<quiche::Connection>>,
+    conn: std::pin::Pin<Box<quiche::Connection>>,
+    partial_responses: HashMap<u64, PartialResponse>,
 }
 
 pub struct UdpClientActor {
@@ -61,7 +69,7 @@ impl UdpClientActor {
         })
     }
 
-    fn send_to(&mut self, len: usize, pkt_buf: &mut [u8], socket_address: SocketAddr) {
+    fn send_to(&self, len: usize, pkt_buf: &mut [u8], socket_address: SocketAddr) -> bool {
         let sink_clone = Arc::clone(&self.sink_write);
 
         let out = Vec::from(pkt_buf);
@@ -76,7 +84,21 @@ impl UdpClientActor {
                 }
             }
         };
-        actix_rt::System::current().arbiter().spawn(fut);
+        actix_rt::System::current().arbiter().spawn(fut)
+    }
+
+    fn send_new_token(
+        &mut self,
+        hdr: &quiche::Header,
+        socket_address: SocketAddr,
+        scid: &ConnectionId,
+        pkt_buf: &mut [u8],
+    ) -> bool {
+        warn!("Doing stateless retry");
+        let new_token = mint_token(hdr, &socket_address);
+        let len =
+            quiche::retry(&hdr.scid, &hdr.dcid, scid, &new_token, hdr.version, pkt_buf).unwrap();
+        self.send_to(len, pkt_buf, socket_address)
     }
 }
 
@@ -98,16 +120,6 @@ impl Actor for UdpClientActor {
         // futures::executor::block_on(async move {
         // socket.clone().send(message).into_actor(self).map(|r, a, c| {}).wait(ctx);
         // });
-        // ctx.run_interval(Duration::from_millis(1000), move |act, inner_ctx| {
-        //     let socket = act.sink_write.clone();
-
-        //     if Instant::now().duration_since(act.hb) >= Duration::from_millis(2000) {
-        //         actix_rt::spawn(async move {
-
-        //             socket.send(message).await.unwrap();
-        //         });
-        //     }
-        // });
     }
 }
 
@@ -123,16 +135,16 @@ impl StreamHandler<Result<(bytes::BytesMut, std::net::SocketAddr), std::io::Erro
             Ok((mut message, socket_address)) => {
                 let len = message.len();
 
-                // bytes.resize(MAX_BUF_SIZE, 0u8);
                 let mut pkt_buf = &mut message[..len];
-                // self.clients.insert(Uuid::new_v4(), v.1);
-                let header_option = match quiche::Header::from_slice(pkt_buf, len) {
-                    Ok(v) => Some(v),
-                    Err(e) => {
-                        error!("Parsing packet header failed: {:?}", e);
-                        None
-                    }
-                };
+
+                let header_option =
+                    match quiche::Header::from_slice(pkt_buf, quiche::MAX_CONN_ID_LEN) {
+                        Ok(v) => Some(v),
+                        Err(e) => {
+                            error!("Parsing packet header failed: {:?}", e);
+                            None
+                        }
+                    };
                 info!("Got packet {:?}", header_option);
                 /////////////////////////////////////////
                 /////////////////////////////////////////
@@ -172,21 +184,7 @@ impl StreamHandler<Result<(bytes::BytesMut, std::net::SocketAddr), std::io::Erro
 
                         // Do stateless retry if the client didn't send a token.
                         if token.is_empty() {
-                            warn!("Doing stateless retry");
-
-                            let new_token = mint_token(&hdr, &socket_address);
-
-                            let len = quiche::retry(
-                                &hdr.scid,
-                                &hdr.dcid,
-                                &scid,
-                                &new_token,
-                                hdr.version,
-                                &mut pkt_buf,
-                            )
-                            .unwrap();
-
-                            self.send_to(len, pkt_buf, socket_address);
+                            self.send_new_token(&hdr, socket_address, &scid, pkt_buf);
                             return;
                         }
 
@@ -208,21 +206,25 @@ impl StreamHandler<Result<(bytes::BytesMut, std::net::SocketAddr), std::io::Erro
                         // instead of changing it again.
                         let scid = hdr.dcid.clone();
 
-                        info!("New connection: dcid={:?} scid={:?}", hdr.dcid, scid);
+                        debug!("New connection: dcid={:?} scid={:?}", hdr.dcid, scid);
 
                         let conn =
                             quiche::accept(&scid, odcid.as_ref(), socket_address, &mut self.config)
                                 .unwrap();
 
-                        let client = Client { conn };
+                        let client = Client {
+                            conn,
+                            partial_responses: HashMap::default(),
+                        };
 
                         self.clients.insert(scid.clone(), client);
 
-                        self.clients.get_mut(&scid).unwrap()
+                        let client = self.clients.get_mut(&scid).unwrap();
+                        client
                     } else {
                         match self.clients.get_mut(&hdr.dcid) {
                             Some(v) => {
-                                warn!("Client found 1");
+                                info!("Client found");
                                 v
                             }
 
@@ -245,8 +247,81 @@ impl StreamHandler<Result<(bytes::BytesMut, std::net::SocketAddr), std::io::Erro
                         }
                     };
                     info!("{} processed {} bytes", client.conn.trace_id(), read);
+
+                    // Generate outgoing QUIC packets for all active connections and send
+                    // them on the UDP socket, until quiche reports that there are no more
+                    // packets to be sent.
+                    // for mut client_ref in self.clients.iter_mut() {
+                        loop {
+                            // let client = client_ref.value_mut();
+                            let (write, send_info) = match client.conn.send(&mut pkt_buf) {
+                                Ok(v) => v,
+
+                                Err(quiche::Error::Done) => {
+                                    debug!("{} done writing", client.conn.trace_id());
+                                    break;
+                                }
+
+                                Err(e) => {
+                                    error!("{} send failed: {:?}", client.conn.trace_id(), e);
+
+                                    client.conn.close(false, 0x1, b"fail").ok();
+                                    break;
+                                }
+                            };
+
+                            if self.send_to(write, pkt_buf, send_info.to) == false {
+                                break;
+                            }
+
+                            debug!("{} written {} bytes", client.conn.trace_id(), write);
+                        }
+                    // }
+
+                    // // Garbage collect closed connections.
+                    // self.clients.retain(|_, ref mut c| {
+                    //     debug!("Collecting garbage");
+
+                    //     if c.conn.is_closed() {
+                    //         info!(
+                    //             "{} connection collected {:?}",
+                    //             c.conn.trace_id(),
+                    //             c.conn.stats()
+                    //         );
+                    //     }
+
+                    //     !c.conn.is_closed()
+                    // });
                     // fut.into_actor(self).map(|a, b, c| {}).wait(ctx);
                     //////////////////////////////////////////////////////
+                    if client.conn.is_in_early_data() || client.conn.is_established() {
+                        warn!("Connection is Established");
+
+                        // Handle writable streams.
+                        for stream_id in client.conn.writable() {
+                            handle_writable(&mut client, stream_id);
+                        }
+
+                        // Process all readable streams.
+                        for s in client.conn.readable() {
+                            warn!("Client connection is readable");
+                            while let Ok((read, fin)) = client.conn.stream_recv(s, &mut pkt_buf) {
+                                warn!("{} received {} bytes", client.conn.trace_id(), read);
+
+                                let stream_buf = &pkt_buf[..read];
+
+                                info!(
+                                    "{} stream {} has {} bytes (fin? {})",
+                                    client.conn.trace_id(),
+                                    s,
+                                    stream_buf.len(),
+                                    fin
+                                );
+                                // let mut bclient = client.value().clone();
+                                handle_stream(&mut client, s, stream_buf, "./");
+                            }
+                        }
+                    }
                 };
             }
             Err(_e) => {
@@ -318,4 +393,94 @@ fn validate_token<'a>(
     }
 
     Some(quiche::ConnectionId::from_ref(&token[addr.len()..]))
+}
+
+/// Handles incoming HTTP/0.9 requests.
+fn handle_stream(client: &mut Client, stream_id: u64, buf: &[u8], root: &str) {
+    let conn = &mut client.conn;
+
+    if buf.len() > 4 && &buf[..4] == b"GET " {
+        let uri = &buf[4..buf.len()];
+        let uri = String::from_utf8(uri.to_vec()).unwrap();
+        let uri = String::from(uri.lines().next().unwrap());
+        let uri = std::path::Path::new(&uri);
+        let mut path = std::path::PathBuf::from(root);
+
+        for c in uri.components() {
+            if let std::path::Component::Normal(v) = c {
+                path.push(v)
+            }
+        }
+
+        info!(
+            "{} got GET request for {:?} on stream {}",
+            conn.trace_id(),
+            path,
+            stream_id
+        );
+        let file_name = path.as_path().file_name().unwrap();
+        let body = match std::fs::read(file_name) {
+            Ok(value) => value,
+            Err(e) => {
+                error!("File not found in path {:?}", file_name);
+                b"Not Found!\r\n".to_vec()
+            }
+        };
+
+        info!(
+            "{} sending response of size {} on stream {}",
+            conn.trace_id(),
+            body.len(),
+            stream_id
+        );
+
+        let written = match conn.stream_send(stream_id, &body, true) {
+            Ok(v) => v,
+
+            Err(quiche::Error::Done) => 0,
+
+            Err(e) => {
+                error!("{} stream send failed {:?}", conn.trace_id(), e);
+                return;
+            }
+        };
+
+        if written < body.len() {
+            let response = PartialResponse { body, written };
+            client.partial_responses.insert(stream_id, response);
+        }
+    }
+}
+
+/// Handles newly writable streams.
+fn handle_writable(client: &mut Client, stream_id: u64) {
+    let conn = &mut client.conn;
+
+    debug!("{} stream {} is writable", conn.trace_id(), stream_id);
+
+    if !client.partial_responses.contains_key(&stream_id) {
+        return;
+    }
+
+    let resp = client.partial_responses.get_mut(&stream_id).unwrap();
+    let body = &resp.body[resp.written..];
+
+    let written = match conn.stream_send(stream_id, body, true) {
+        Ok(v) => v,
+
+        Err(quiche::Error::Done) => 0,
+
+        Err(e) => {
+            client.partial_responses.remove(&stream_id);
+
+            error!("{} stream send failed {:?}", conn.trace_id(), e);
+            return;
+        }
+    };
+
+    resp.written += written;
+
+    if resp.written == resp.body.len() {
+        client.partial_responses.remove(&stream_id);
+    }
 }
