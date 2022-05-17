@@ -9,14 +9,15 @@ use ring::hmac::Key;
 use ring::rand::SystemRandom;
 use std::borrow::BorrowMut;
 use std::collections::HashMap;
+use std::io::{BufRead, BufReader};
 use std::net::SocketAddr;
 
 use std::sync::Arc;
-use std::time::Instant;
+use std::time::{Duration, Instant};
 
 use futures_util::stream::SplitSink;
 use futures_util::StreamExt;
-use log::{debug, error, info, warn};
+use log::{debug, error, info, trace, warn};
 use tokio::net::UdpSocket;
 use tokio_util::codec::{self};
 use tokio_util::udp::UdpFramed;
@@ -36,7 +37,7 @@ pub struct Client {
     partial_responses: HashMap<u64, PartialResponse>,
 }
 
-pub struct UdpClientActor {
+pub struct UdpServerActor {
     pub sink_write: Arc<UdpSocket>,
     #[allow(dead_code)]
     clients: DashMap<ConnectionId<'static>, Client>,
@@ -48,18 +49,18 @@ pub struct UdpClientActor {
 }
 
 #[allow(dead_code)]
-impl UdpClientActor {
-    pub fn start(udp: UdpSocket, config: quiche::Config) -> Addr<UdpClientActor> {
+impl UdpServerActor {
+    pub fn start(udp: UdpSocket, config: quiche::Config) -> Addr<UdpServerActor> {
         let udp_arc = Arc::new(udp);
         let framed = UdpFramed::new(udp_arc.clone(), codec::BytesCodec::default());
         let (_split_sink, split_stream) = framed.split::<(bytes::BytesMut, SocketAddr)>();
 
         let rng = SystemRandom::new();
         let conn_id_seed = ring::hmac::Key::generate(ring::hmac::HMAC_SHA256, &rng).unwrap();
-        UdpClientActor::create(|ctx| {
+        UdpServerActor::create(|ctx| {
             ctx.add_stream(split_stream);
             // let sink_write: UdpSink = SinkWrite::new(udp_arc, ctx);
-            UdpClientActor {
+            UdpServerActor {
                 sink_write: udp_arc,
                 clients: DashMap::default(),
                 config,
@@ -102,29 +103,33 @@ impl UdpClientActor {
     }
 }
 
-impl Actor for UdpClientActor {
+impl Actor for UdpServerActor {
     type Context = Context<Self>;
 
-    fn started(&mut self, _ctx: &mut Self::Context) {
-        let message = b"Ping";
+    fn started(&mut self, ctx: &mut Self::Context) {
+        // let message = b"Ping";
         let socket = Arc::clone(&self.sink_write);
         let _address = socket.local_addr();
 
-        let _fut = async move {
-            match socket.send(message).await {
-                Ok(_) => warn!("Message Sent"),
-                Err(e) => warn!("Error sending message {:?}", e),
-            }
-        };
-        // fut.into_actor(self).map(|_a, _b, _c| {}).wait(ctx);
-        // futures::executor::block_on(async move {
-        // socket.clone().send(message).into_actor(self).map(|r, a, c| {}).wait(ctx);
-        // });
+        ctx.run_interval(Duration::from_millis(1000), |a, _c| {
+            a.clients.retain(|_, c| {
+                debug!("Collecting garbage");
+
+                if c.conn.is_closed() {
+                    error!(
+                        "{} connection collected {:?}",
+                        c.conn.trace_id(),
+                        c.conn.stats()
+                    );
+                }
+                !c.conn.is_closed()
+            });
+        });
     }
 }
 
 impl StreamHandler<Result<(bytes::BytesMut, std::net::SocketAddr), std::io::Error>>
-    for UdpClientActor
+    for UdpServerActor
 {
     fn handle(
         &mut self,
@@ -172,6 +177,7 @@ impl StreamHandler<Result<(bytes::BytesMut, std::net::SocketAddr), std::io::Erro
                                 .unwrap();
 
                             self.send_to(len, pkt_buf, socket_address);
+                            return;
                         }
 
                         let mut scid = [0; quiche::MAX_CONN_ID_LEN];
@@ -247,55 +253,8 @@ impl StreamHandler<Result<(bytes::BytesMut, std::net::SocketAddr), std::io::Erro
                         }
                     };
                     info!("{} processed {} bytes", client.conn.trace_id(), read);
-
-                    // Generate outgoing QUIC packets for all active connections and send
-                    // them on the UDP socket, until quiche reports that there are no more
-                    // packets to be sent.
-                    // for mut client_ref in self.clients.iter_mut() {
-                        loop {
-                            // let client = client_ref.value_mut();
-                            let (write, send_info) = match client.conn.send(&mut pkt_buf) {
-                                Ok(v) => v,
-
-                                Err(quiche::Error::Done) => {
-                                    debug!("{} done writing", client.conn.trace_id());
-                                    break;
-                                }
-
-                                Err(e) => {
-                                    error!("{} send failed: {:?}", client.conn.trace_id(), e);
-
-                                    client.conn.close(false, 0x1, b"fail").ok();
-                                    break;
-                                }
-                            };
-
-                            if self.send_to(write, pkt_buf, send_info.to) == false {
-                                break;
-                            }
-
-                            debug!("{} written {} bytes", client.conn.trace_id(), write);
-                        }
-                    // }
-
-                    // // Garbage collect closed connections.
-                    // self.clients.retain(|_, ref mut c| {
-                    //     debug!("Collecting garbage");
-
-                    //     if c.conn.is_closed() {
-                    //         info!(
-                    //             "{} connection collected {:?}",
-                    //             c.conn.trace_id(),
-                    //             c.conn.stats()
-                    //         );
-                    //     }
-
-                    //     !c.conn.is_closed()
-                    // });
-                    // fut.into_actor(self).map(|a, b, c| {}).wait(ctx);
-                    //////////////////////////////////////////////////////
                     if client.conn.is_in_early_data() || client.conn.is_established() {
-                        warn!("Connection is Established");
+                        trace!("Connection is Established");
 
                         // Handle writable streams.
                         for stream_id in client.conn.writable() {
@@ -304,7 +263,7 @@ impl StreamHandler<Result<(bytes::BytesMut, std::net::SocketAddr), std::io::Erro
 
                         // Process all readable streams.
                         for s in client.conn.readable() {
-                            warn!("Client connection is readable");
+                            trace!("Client connection is readable");
                             while let Ok((read, fin)) = client.conn.stream_recv(s, &mut pkt_buf) {
                                 warn!("{} received {} bytes", client.conn.trace_id(), read);
 
@@ -322,7 +281,68 @@ impl StreamHandler<Result<(bytes::BytesMut, std::net::SocketAddr), std::io::Erro
                             }
                         }
                     }
+                    // Generate outgoing QUIC packets for all active connections and send
+                    // them on the UDP socket, until quiche reports that there are no more
+                    // packets to be sent.
+                    
                 };
+
+                for mut client_ref in self.clients.iter_mut() {
+                    if client_ref.conn.is_in_early_data() || client_ref.conn.is_established() {
+                        trace!("Connection is Established");
+
+                        // Handle writable streams.
+                        for stream_id in client_ref.conn.writable() {
+                            handle_writable(&mut client_ref, stream_id);
+                        }
+
+                        // Process all readable streams.
+                        for s in client_ref.conn.readable() {
+                            trace!("Client connection is readable");
+                            while let Ok((read, fin)) = client_ref.conn.stream_recv(s, &mut pkt_buf) {
+                                warn!("{} received {} bytes", client_ref.conn.trace_id(), read);
+
+                                let stream_buf = &pkt_buf[..read];
+
+                                info!(
+                                    "{} stream {} has {} bytes (fin? {})",
+                                    client_ref.conn.trace_id(),
+                                    s,
+                                    stream_buf.len(),
+                                    fin
+                                );
+                                // let mut bclient = client.value().clone();
+                                handle_stream(&mut client_ref, s, stream_buf, "./");
+                            }
+                        }
+                    }
+                    loop {
+                        // let client = client_ref.value_mut();
+                        let (write, send_info) = match client_ref.conn.send(&mut pkt_buf) {
+                            Ok(v) => v,
+
+                            Err(quiche::Error::Done) => {
+                                trace!("{} done writing", client_ref.conn.trace_id());
+                                break;
+                            }
+
+                            Err(e) => {
+                                error!("{} send failed: {:?}", client_ref.conn.trace_id(), e);
+
+                                client_ref.conn.close(false, 0x1, b"fail").ok();
+                                break;
+                            }
+                        };
+
+                        if self.send_to(write, pkt_buf, send_info.to) == false {
+                            break;
+                        }
+
+                        warn!("{} written {} bytes", client_ref.conn.trace_id(), write);
+                        // std::thread::sleep(Duration::from_millis(250));
+                    }
+                }
+                //////////////////////////////////////////////////////
             }
             Err(_e) => {
                 ctx.stop();
@@ -331,7 +351,7 @@ impl StreamHandler<Result<(bytes::BytesMut, std::net::SocketAddr), std::io::Erro
     }
 }
 
-impl actix::io::WriteHandler<std::io::Error> for UdpClientActor {
+impl actix::io::WriteHandler<std::io::Error> for UdpServerActor {
     fn finished(&mut self, ctx: &mut Self::Context) {
         error!("Finished");
         ctx.stop();
@@ -421,20 +441,23 @@ fn handle_stream(client: &mut Client, stream_id: u64, buf: &[u8], root: &str) {
         let file_name = path.as_path().file_name().unwrap();
         let body = match std::fs::read(file_name) {
             Ok(value) => value,
-            Err(e) => {
+            Err(_e) => {
                 error!("File not found in path {:?}", file_name);
                 b"Not Found!\r\n".to_vec()
             }
         };
+        // let file = std::fs::File::open(file_name).unwrap();
+        // let buf_read = BufReader::new(file);
 
-        info!(
+
+        // let body = buf_read.buffer();
+        error!(
             "{} sending response of size {} on stream {}",
             conn.trace_id(),
             body.len(),
             stream_id
         );
-
-        let written = match conn.stream_send(stream_id, &body, true) {
+        let written = match conn.stream_send(stream_id,&body, true) {
             Ok(v) => v,
 
             Err(quiche::Error::Done) => 0,
@@ -446,7 +469,7 @@ fn handle_stream(client: &mut Client, stream_id: u64, buf: &[u8], root: &str) {
         };
 
         if written < body.len() {
-            let response = PartialResponse { body, written };
+            let response = PartialResponse { body: body.to_vec(), written };
             client.partial_responses.insert(stream_id, response);
         }
     }
@@ -464,7 +487,7 @@ fn handle_writable(client: &mut Client, stream_id: u64) {
 
     let resp = client.partial_responses.get_mut(&stream_id).unwrap();
     let body = &resp.body[resp.written..];
-
+    error!("There's still {} bytes to write", body.len());
     let written = match conn.stream_send(stream_id, body, true) {
         Ok(v) => v,
 

@@ -6,10 +6,12 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-tokio= {version = "*", features=["net", "macros", "rt-multi-thread", "time"]}
+tokio= {version = "*", features=["net", "macros", "rt-multi-thread", "time", "sync"]}
 quiche={git="https://github.com/cloudflare/quiche.git"}
 ring= "*"
 log= "*"
 env_logger= "*"
 url= "*"
 mio= "*"
+log4rs= "*"
+futures= "*"

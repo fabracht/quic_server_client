@@ -1,0 +1,543 @@
+2022-05-16 23:41:16 - INFO: stream 4 has 200 bytes (fin? false) -> udp_client/src/main.rs-411
+2022-05-16 23:41:16 - INFO: Unsafe stream is c mihi videtur delicatior, ut ita dicam, molliorque ratio, quam virtutis vis gravitasque postulat. Sed quoniam et advesperascit et mihi ad villam revertendum est, nunc quidem hactenus; Cuius ad natura -> udp_client/src/main.rs-413
+2022-05-16 23:41:16 - INFO: Sending 44, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9027230264356 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:16 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:16 - INFO: 244 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:16 - WARN: received 200 bytes -> udp_client/src/main.rs-407
+2022-05-16 23:41:16 - INFO: stream 4 has 200 bytes (fin? false) -> udp_client/src/main.rs-411
+2022-05-16 23:41:16 - INFO: Unsafe stream is m apta ratio vera illa et summa lex a philosophis dicitur. Neque solum ea communia, verum etiam paria esse dixerunt. Sed nunc, quod agimus; A mene tu?
+Quod equidem non reprehendo;
+Lorem ipsum dolor si -> udp_client/src/main.rs-413
+2022-05-16 23:41:16 - INFO: Sending 44, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9027476799163 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:17 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:17 - INFO: 244 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:17 - WARN: received 200 bytes -> udp_client/src/main.rs-407
+2022-05-16 23:41:17 - INFO: stream 4 has 200 bytes (fin? false) -> udp_client/src/main.rs-411
+2022-05-16 23:41:17 - INFO: Unsafe stream is t amet, consectetur adipiscing elit. Quibus natura iure responderit non esse verum aliunde finem beate vivendi, a se principia rei gerendae peti; Quae enim adhuc protulisti, popularia sunt, ego autem  -> udp_client/src/main.rs-413
+2022-05-16 23:41:17 - INFO: Sending 44, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9027728322288 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:17 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:17 - INFO: 244 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:17 - WARN: received 200 bytes -> udp_client/src/main.rs-407
+2022-05-16 23:41:17 - INFO: stream 4 has 200 bytes (fin? false) -> udp_client/src/main.rs-411
+2022-05-16 23:41:17 - INFO: Unsafe stream is a te elegantiora desidero. Duo Reges: constructio interrete. Tum Lucius: Mihi vero ista valde probata sunt, quod item fratri puto. Bestiarum vero nullum iudicium puto. Nihil enim iam habes, quod ad co -> udp_client/src/main.rs-413
+2022-05-16 23:41:17 - INFO: Sending 44, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9027978439252 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:17 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:17 - INFO: 244 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:17 - WARN: received 200 bytes -> udp_client/src/main.rs-407
+2022-05-16 23:41:17 - INFO: stream 4 has 200 bytes (fin? false) -> udp_client/src/main.rs-411
+2022-05-16 23:41:17 - INFO: Unsafe stream is rpus referas; Deinde prima illa, quae in congressu solemus: Quid tu, inquit, huc? Et homini, qui ceteris animantibus plurimum praestat, praecipue a natura nihil datum esse dicemus?
+
+Iam id ipsum absur -> udp_client/src/main.rs-413
+2022-05-16 23:41:17 - INFO: Sending 44, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9028226957476 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:17 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:17 - INFO: 244 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:17 - WARN: received 200 bytes -> udp_client/src/main.rs-407
+2022-05-16 23:41:17 - INFO: stream 4 has 200 bytes (fin? false) -> udp_client/src/main.rs-411
+2022-05-16 23:41:17 - INFO: Unsafe stream is dum, maximum malum neglegi. Quod ea non occurrentia fingunt, vincunt Aristonem; Atqui perspicuum est hominem e corpore animoque constare, cum primae sint animi partes, secundae corporis. Fieri, inquam -> udp_client/src/main.rs-413
+2022-05-16 23:41:17 - INFO: Sending 44, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9028477070473 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:18 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:18 - INFO: 244 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:18 - WARN: received 200 bytes -> udp_client/src/main.rs-407
+2022-05-16 23:41:18 - INFO: stream 4 has 200 bytes (fin? false) -> udp_client/src/main.rs-411
+2022-05-16 23:41:18 - INFO: Unsafe stream is , Triari, nullo pacto potest, ut non dicas, quid non probes eius, a quo dissentias. Equidem e Cn. An dubium est, quin virtus ita maximam partem optineat in rebus humanis, ut reliquas obruat?
+
+Quis ist -> udp_client/src/main.rs-413
+2022-05-16 23:41:18 - INFO: Sending 44, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9028726824790 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:18 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:18 - INFO: 244 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:18 - WARN: received 200 bytes -> udp_client/src/main.rs-407
+2022-05-16 23:41:18 - INFO: stream 4 has 200 bytes (fin? false) -> udp_client/src/main.rs-411
+2022-05-16 23:41:18 - INFO: Unsafe stream is um dolorem timet?
+Summus dolor plures dies manere non potest? Dicet pro me ipsa virtus nec dubitabit isti vestro beato M. Tubulum fuisse, qua illum, cuius is condemnatus est rogatione, P. Quod si ita  -> udp_client/src/main.rs-413
+2022-05-16 23:41:18 - INFO: Sending 44, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9028980643819 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:18 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:18 - INFO: 244 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:18 - WARN: received 200 bytes -> udp_client/src/main.rs-407
+2022-05-16 23:41:18 - INFO: stream 4 has 200 bytes (fin? false) -> udp_client/src/main.rs-411
+2022-05-16 23:41:18 - INFO: Unsafe stream is sit, cur opera philosophiae sit danda nescio.
+
+Ex eorum enim scriptis et institutis cum omnis doctrina liberalis, omnis historia.
+Quod si ita est, sequitur id ipsum, quod te velle video, omnes semper  -> udp_client/src/main.rs-413
+2022-05-16 23:41:18 - INFO: Sending 45, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9029227688015 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:18 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:18 - INFO: 244 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:18 - WARN: received 200 bytes -> udp_client/src/main.rs-407
+2022-05-16 23:41:18 - INFO: stream 4 has 200 bytes (fin? false) -> udp_client/src/main.rs-411
+2022-05-16 23:41:18 - INFO: Unsafe stream is beatos esse sapientes. Cum enim fertur quasi torrens oratio, quamvis multa cuiusque modi rapiat, nihil tamen teneas, nihil apprehendas, nusquam orationem rapidam coerceas. Ita redarguitur ipse a sese, -> udp_client/src/main.rs-413
+2022-05-16 23:41:18 - INFO: Sending 45, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9029476636086 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:19 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:19 - INFO: 244 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:19 - WARN: received 200 bytes -> udp_client/src/main.rs-407
+2022-05-16 23:41:19 - INFO: stream 4 has 200 bytes (fin? false) -> udp_client/src/main.rs-411
+2022-05-16 23:41:19 - INFO: Unsafe stream is  convincunturque scripta eius probitate ipsius ac moribus. At quanta conantur! Mundum hunc omnem oppidum esse nostrum! Incendi igitur eos, qui audiunt, vides. Vide, ne magis, inquam, tuum fuerit, cum  -> udp_client/src/main.rs-413
+2022-05-16 23:41:19 - INFO: Sending 44, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9029726314852 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:19 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:19 - INFO: 244 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:19 - WARN: received 200 bytes -> udp_client/src/main.rs-407
+2022-05-16 23:41:19 - INFO: stream 4 has 200 bytes (fin? false) -> udp_client/src/main.rs-411
+2022-05-16 23:41:19 - INFO: Unsafe stream is re idem tibi, quod mihi, videretur, non nova te rebus nomina inponere. Qui-vere falsone, quaerere mittimus-dicitur oculis se privasse; Si ista mala sunt, in quae potest incidere sapiens, sapientem ess -> udp_client/src/main.rs-413
+2022-05-16 23:41:19 - INFO: Sending 44, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9029977141110 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:19 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:19 - INFO: 244 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:19 - WARN: received 200 bytes -> udp_client/src/main.rs-407
+2022-05-16 23:41:19 - INFO: stream 4 has 200 bytes (fin? false) -> udp_client/src/main.rs-411
+2022-05-16 23:41:19 - INFO: Unsafe stream is e non esse ad beate vivendum satis. At vero si ad vitem sensus accesserit, ut appetitum quendam habeat et per se ipsa moveatur, quid facturam putas?
+
+Quem si tenueris, non modo meum Ciceronem, sed eti -> udp_client/src/main.rs-413
+2022-05-16 23:41:19 - INFO: Sending 44, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9030230421691 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:19 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:19 - INFO: 244 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:19 - WARN: received 200 bytes -> udp_client/src/main.rs-407
+2022-05-16 23:41:19 - INFO: stream 4 has 200 bytes (fin? false) -> udp_client/src/main.rs-411
+2022-05-16 23:41:19 - INFO: Unsafe stream is am me ipsum abducas licebit.
+Stulti autem malorum memoria torquentur, sapientes bona praeterita grata recordatione renovata delectant.
+Esse enim quam vellet iniquus iustus poterat inpune.
+Quae autem n -> udp_client/src/main.rs-413
+2022-05-16 23:41:19 - INFO: Sending 44, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9030480410209 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:20 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:20 - INFO: 244 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:20 - WARN: received 200 bytes -> udp_client/src/main.rs-407
+2022-05-16 23:41:20 - INFO: stream 4 has 200 bytes (fin? false) -> udp_client/src/main.rs-411
+2022-05-16 23:41:20 - INFO: Unsafe stream is atura suae primae institutionis oblita est?
+Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt;
+Hoc est non modo cor non habere, sed ne palatum quidem.
+Voluptatem cum summum bonum di -> udp_client/src/main.rs-413
+2022-05-16 23:41:20 - INFO: Sending 44, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9030726524665 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:20 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:20 - INFO: 244 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:20 - WARN: received 200 bytes -> udp_client/src/main.rs-407
+2022-05-16 23:41:20 - INFO: stream 4 has 200 bytes (fin? false) -> udp_client/src/main.rs-411
+2022-05-16 23:41:20 - INFO: Unsafe stream is ceret, primum in eo ipso parum vidit, deinde hoc quoque alienum; Sed tu istuc dixti bene Latine, parum plane. Nam haec ipsa mihi erunt in promptu, quae modo audivi, nec ante aggrediar, quam te ab isti -> udp_client/src/main.rs-413
+2022-05-16 23:41:20 - INFO: Sending 44, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9030977282496 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:20 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:20 - INFO: 244 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:20 - WARN: received 200 bytes -> udp_client/src/main.rs-407
+2022-05-16 23:41:20 - INFO: stream 4 has 200 bytes (fin? false) -> udp_client/src/main.rs-411
+2022-05-16 23:41:20 - INFO: Unsafe stream is s, quos dicis, instructum videro. Fatebuntur Stoici haec omnia dicta esse praeclare, neque eam causam Zenoni desciscendi fuisse. Non autem hoc: igitur ne illud quidem. Ratio quidem vestra sic cogit. C -> udp_client/src/main.rs-413
+2022-05-16 23:41:20 - INFO: Sending 44, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9031226089666 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:20 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:20 - INFO: 244 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:20 - WARN: received 200 bytes -> udp_client/src/main.rs-407
+2022-05-16 23:41:20 - INFO: stream 4 has 200 bytes (fin? false) -> udp_client/src/main.rs-411
+2022-05-16 23:41:20 - INFO: Unsafe stream is um audissem Antiochum, Brute, ut solebam, cum M. An quod ita callida est, ut optime possit architectari voluptates?
+
+Idemne, quod iucunde?
+Haec mihi videtur delicatior, ut ita dicam, molliorque ratio, -> udp_client/src/main.rs-413
+2022-05-16 23:41:20 - INFO: Sending 44, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9031481374592 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:21 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:21 - INFO: 244 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:21 - WARN: received 200 bytes -> udp_client/src/main.rs-407
+2022-05-16 23:41:21 - INFO: stream 4 has 200 bytes (fin? false) -> udp_client/src/main.rs-411
+2022-05-16 23:41:21 - INFO: Unsafe stream is  quam virtutis vis gravitasque postulat. Sed quoniam et advesperascit et mihi ad villam revertendum est, nunc quidem hactenus; Cuius ad naturam apta ratio vera illa et summa lex a philosophis dicitur. -> udp_client/src/main.rs-413
+2022-05-16 23:41:21 - INFO: Sending 44, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9031727443182 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:21 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:21 - INFO: 244 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:21 - WARN: received 200 bytes -> udp_client/src/main.rs-407
+2022-05-16 23:41:21 - INFO: stream 4 has 200 bytes (fin? false) -> udp_client/src/main.rs-411
+2022-05-16 23:41:21 - INFO: Unsafe stream is  Neque solum ea communia, verum etiam paria esse dixerunt. Sed nunc, quod agimus; A mene tu?
+Quod equidem non reprehendo;
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quibus natura iure re -> udp_client/src/main.rs-413
+2022-05-16 23:41:21 - INFO: Sending 44, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9031980123777 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:21 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:21 - INFO: 244 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:21 - WARN: received 200 bytes -> udp_client/src/main.rs-407
+2022-05-16 23:41:21 - INFO: stream 4 has 200 bytes (fin? false) -> udp_client/src/main.rs-411
+2022-05-16 23:41:21 - INFO: Unsafe stream is sponderit non esse verum aliunde finem beate vivendi, a se principia rei gerendae peti; Quae enim adhuc protulisti, popularia sunt, ego autem a te elegantiora desidero. Duo Reges: constructio interret -> udp_client/src/main.rs-413
+2022-05-16 23:41:21 - INFO: Sending 44, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9032226561535 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:21 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:21 - INFO: 244 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:21 - WARN: received 200 bytes -> udp_client/src/main.rs-407
+2022-05-16 23:41:21 - INFO: stream 4 has 200 bytes (fin? false) -> udp_client/src/main.rs-411
+2022-05-16 23:41:21 - INFO: Unsafe stream is e. Tum Lucius: Mihi vero ista valde probata sunt, quod item fratri puto. Bestiarum vero nullum iudicium puto. Nihil enim iam habes, quod ad corpus referas; Deinde prima illa, quae in congressu solemus -> udp_client/src/main.rs-413
+2022-05-16 23:41:21 - INFO: Sending 44, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9032476679819 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:22 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:22 - INFO: 244 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:22 - WARN: received 200 bytes -> udp_client/src/main.rs-407
+2022-05-16 23:41:22 - INFO: stream 4 has 200 bytes (fin? false) -> udp_client/src/main.rs-411
+2022-05-16 23:41:22 - INFO: Unsafe stream is : Quid tu, inquit, huc? Et homini, qui ceteris animantibus plurimum praestat, praecipue a natura nihil datum esse dicemus?
+
+Iam id ipsum absurdum, maximum malum neglegi. Quod ea non occurrentia fingun -> udp_client/src/main.rs-413
+2022-05-16 23:41:22 - INFO: Sending 44, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9032727221322 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:22 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:22 - INFO: 244 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:22 - WARN: received 200 bytes -> udp_client/src/main.rs-407
+2022-05-16 23:41:22 - INFO: stream 4 has 200 bytes (fin? false) -> udp_client/src/main.rs-411
+2022-05-16 23:41:22 - INFO: Unsafe stream is t, vincunt Aristonem; Atqui perspicuum est hominem e corpore animoque constare, cum primae sint animi partes, secundae corporis. Fieri, inquam, Triari, nullo pacto potest, ut non dicas, quid non probe -> udp_client/src/main.rs-413
+2022-05-16 23:41:22 - INFO: Sending 44, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9032976742025 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:22 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:22 - INFO: 244 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:22 - WARN: received 200 bytes -> udp_client/src/main.rs-407
+2022-05-16 23:41:22 - INFO: stream 4 has 200 bytes (fin? false) -> udp_client/src/main.rs-411
+2022-05-16 23:41:22 - INFO: Unsafe stream is s eius, a quo dissentias. Equidem e Cn. An dubium est, quin virtus ita maximam partem optineat in rebus humanis, ut reliquas obruat?
+
+Quis istum dolorem timet?
+Summus dolor plures dies manere non pote -> udp_client/src/main.rs-413
+2022-05-16 23:41:22 - INFO: Sending 44, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9033227152619 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:22 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:22 - INFO: 244 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:22 - WARN: received 200 bytes -> udp_client/src/main.rs-407
+2022-05-16 23:41:22 - INFO: stream 4 has 200 bytes (fin? false) -> udp_client/src/main.rs-411
+2022-05-16 23:41:22 - INFO: Unsafe stream is st? Dicet pro me ipsa virtus nec dubitabit isti vestro beato M. Tubulum fuisse, qua illum, cuius is condemnatus est rogatione, P. Quod si ita sit, cur opera philosophiae sit danda nescio.
+
+Ex eorum en -> udp_client/src/main.rs-413
+2022-05-16 23:41:22 - INFO: Sending 44, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9033477018992 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:23 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:23 - INFO: 244 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:23 - WARN: received 200 bytes -> udp_client/src/main.rs-407
+2022-05-16 23:41:23 - INFO: stream 4 has 200 bytes (fin? false) -> udp_client/src/main.rs-411
+2022-05-16 23:41:23 - INFO: Unsafe stream is im scriptis et institutis cum omnis doctrina liberalis, omnis historia.
+Quod si ita est, sequitur id ipsum, quod te velle video, omnes semper beatos esse sapientes. Cum enim fertur quasi torrens orati -> udp_client/src/main.rs-413
+2022-05-16 23:41:23 - INFO: Sending 45, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9033727035481 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:23 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:23 - INFO: 244 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:23 - WARN: received 200 bytes -> udp_client/src/main.rs-407
+2022-05-16 23:41:23 - INFO: stream 4 has 200 bytes (fin? false) -> udp_client/src/main.rs-411
+2022-05-16 23:41:23 - INFO: Unsafe stream is o, quamvis multa cuiusque modi rapiat, nihil tamen teneas, nihil apprehendas, nusquam orationem rapidam coerceas. Ita redarguitur ipse a sese, convincunturque scripta eius probitate ipsius ac moribus. -> udp_client/src/main.rs-413
+2022-05-16 23:41:23 - INFO: Sending 45, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9033976989454 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:23 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:23 - INFO: 244 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:23 - WARN: received 200 bytes -> udp_client/src/main.rs-407
+2022-05-16 23:41:23 - INFO: stream 4 has 200 bytes (fin? false) -> udp_client/src/main.rs-411
+2022-05-16 23:41:23 - INFO: Unsafe stream is  At quanta conantur! Mundum hunc omnem oppidum esse nostrum! Incendi igitur eos, qui audiunt, vides. Vide, ne magis, inquam, tuum fuerit, cum re idem tibi, quod mihi, videretur, non nova te rebus nomi -> udp_client/src/main.rs-413
+2022-05-16 23:41:23 - INFO: Sending 44, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9034230596629 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:23 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:23 - INFO: 244 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:23 - WARN: received 200 bytes -> udp_client/src/main.rs-407
+2022-05-16 23:41:23 - INFO: stream 4 has 200 bytes (fin? false) -> udp_client/src/main.rs-411
+2022-05-16 23:41:23 - INFO: Unsafe stream is na inponere. Qui-vere falsone, quaerere mittimus-dicitur oculis se privasse; Si ista mala sunt, in quae potest incidere sapiens, sapientem esse non esse ad beate vivendum satis. At vero si ad vitem se -> udp_client/src/main.rs-413
+2022-05-16 23:41:23 - INFO: Sending 44, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9034478314529 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:24 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:24 - INFO: 244 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:24 - WARN: received 200 bytes -> udp_client/src/main.rs-407
+2022-05-16 23:41:24 - INFO: stream 4 has 200 bytes (fin? false) -> udp_client/src/main.rs-411
+2022-05-16 23:41:24 - INFO: Unsafe stream is nsus accesserit, ut appetitum quendam habeat et per se ipsa moveatur, quid facturam putas?
+
+Quem si tenueris, non modo meum Ciceronem, sed etiam me ipsum abducas licebit.
+Stulti autem malorum memoria  -> udp_client/src/main.rs-413
+2022-05-16 23:41:24 - INFO: Sending 44, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9034729217644 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:24 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:24 - INFO: 244 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:24 - WARN: received 200 bytes -> udp_client/src/main.rs-407
+2022-05-16 23:41:24 - INFO: stream 4 has 200 bytes (fin? false) -> udp_client/src/main.rs-411
+2022-05-16 23:41:24 - INFO: Unsafe stream is torquentur, sapientes bona praeterita grata recordatione renovata delectant.
+Esse enim quam vellet iniquus iustus poterat inpune.
+Quae autem natura suae primae institutionis oblita est?
+Verum tamen cu -> udp_client/src/main.rs-413
+2022-05-16 23:41:24 - INFO: Sending 44, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9034978997051 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:24 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:24 - INFO: 244 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:24 - WARN: received 200 bytes -> udp_client/src/main.rs-407
+2022-05-16 23:41:24 - INFO: stream 4 has 200 bytes (fin? false) -> udp_client/src/main.rs-411
+2022-05-16 23:41:24 - INFO: Unsafe stream is m de rebus grandioribus dicas, ipsae res verba rapiunt;
+Hoc est non modo cor non habere, sed ne palatum quidem.
+Voluptatem cum summum bonum diceret, primum in eo ipso parum vidit, deinde hoc quoque al -> udp_client/src/main.rs-413
+2022-05-16 23:41:24 - INFO: Sending 44, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9035230256076 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:24 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:24 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:25 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:25 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:25 - INFO: Sending 44, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9035729053806 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:25 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:25 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:25 - INFO: Sending 44, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9035976344583 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:25 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:25 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:25 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:25 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:25 - INFO: Sending 44, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9036477106630 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:26 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:26 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:26 - INFO: Sending 44, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9036727101841 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:26 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:26 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:26 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:26 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:26 - INFO: Sending 44, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9037228348407 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:26 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:26 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:27 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:27 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:27 - INFO: Sending 44, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9037728315568 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:27 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:27 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:27 - INFO: Sending 44, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9037978872425 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:27 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:27 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:27 - INFO: Sending 44, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9038228736324 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:27 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:27 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:28 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:28 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:28 - INFO: Sending 44, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9038729354387 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:28 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:28 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:28 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:28 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:28 - INFO: Sending 45, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9039226865588 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:28 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:28 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:28 - INFO: Sending 45, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9039477333980 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:29 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:29 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:29 - INFO: Sending 45, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9039726668288 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:29 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:29 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:29 - INFO: Sending 45, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9039977311150 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:29 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:29 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:29 - INFO: Sending 45, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9040226797924 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:29 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:29 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:30 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:30 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:30 - INFO: Sending 47, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9040980309771 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:30 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:30 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:30 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:30 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:30 - INFO: Sending 47, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9041477046803 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:30 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:30 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:31 - INFO: Sending 47, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9041726557733 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:31 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:31 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:31 - INFO: Sending 47, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9041976341536 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:31 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:31 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:31 - INFO: Sending 47, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9042226903663 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:31 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:31 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:31 - INFO: Sending 47, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9042478449590 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:31 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:31 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:32 - INFO: Sending 47, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9042726557380 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:32 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:32 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:32 - INFO: Sending 47, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9042978365648 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:32 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:32 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:32 - INFO: Sending 47, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9043227172627 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:32 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:32 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:32 - INFO: Sending 48, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9043479554359 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:32 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:32 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:33 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:33 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:33 - INFO: Sending 47, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9043977769511 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:33 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:33 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:33 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:33 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:33 - INFO: Sending 47, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9044476400925 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:33 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:33 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:34 - INFO: Sending 47, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9044726966050 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:34 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:34 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:34 - INFO: Sending 47, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9044976854809 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:34 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:34 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:34 - INFO: Sending 47, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9045229900741 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:34 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:34 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:34 - INFO: Sending 47, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9045480921280 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:34 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:34 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:35 - INFO: Sending 47, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9045726474682 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:35 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:35 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:35 - INFO: Sending 48, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9045977745676 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:35 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:35 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:35 - INFO: Sending 48, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9046227676291 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:35 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:35 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:35 - INFO: Sending 48, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9046480722070 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:35 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:35 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:36 - INFO: Sending 48, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9046728031057 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:36 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:36 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:36 - INFO: Sending 48, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9046976898064 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:36 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:36 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:36 - INFO: Sending 48, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9047226974754 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:36 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:36 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:36 - INFO: Sending 48, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9047478238853 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:36 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:36 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:37 - INFO: Sending 48, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9047728660643 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:37 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:37 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:37 - INFO: Sending 48, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9047978497148 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:37 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:37 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:37 - INFO: Sending 48, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9048227033706 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:37 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:37 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:37 - INFO: Sending 48, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9048477097536 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:37 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:37 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:38 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:38 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:38 - INFO: Sending 47, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9048979265791 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:38 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:38 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:38 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:38 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:38 - INFO: Sending 47, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9049477063010 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:39 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:39 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:39 - INFO: Sending 47, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9049726781342 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:39 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:39 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:39 - INFO: Sending 47, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9049975914486 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:39 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:39 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:39 - INFO: Sending 47, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9050228245078 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:39 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:39 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:39 - INFO: Sending 48, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9050480612788 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:40 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:40 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:40 - INFO: Sending 48, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9050727073279 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:40 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:40 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:40 - INFO: Sending 48, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9050978428651 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:40 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:40 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:40 - INFO: Sending 48, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9051228738811 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:40 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:40 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:40 - INFO: Sending 48, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9051479381753 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:41 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:41 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:41 - INFO: Sending 48, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9051728733302 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:41 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:41 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:41 - INFO: Sending 46, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9051978231556 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:41 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:41 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:41 - INFO: Sending 46, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9052226143998 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:41 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:41 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:41 - INFO: Sending 46, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9052477012586 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:42 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:42 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:42 - INFO: Sending 46, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9052729522861 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:42 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:42 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:42 - INFO: Sending 46, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9052976894206 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:42 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:42 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:42 - INFO: Sending 46, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9053229791872 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:42 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:42 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:42 - INFO: Sending 46, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9053480463712 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:43 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:43 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:43 - INFO: Sending 46, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9053730556410 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:43 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:43 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:43 - INFO: Sending 46, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9053980526418 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:43 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:43 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:43 - INFO: Sending 46, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9054226680618 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:43 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:43 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:43 - INFO: Sending 46, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9054476753242 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:44 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:44 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:44 - INFO: Sending 46, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9054727480276 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:44 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:44 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:44 - INFO: Sending 46, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9054976810936 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:44 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:44 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:44 - INFO: Sending 46, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9055227078506 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:44 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:44 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:44 - INFO: Sending 46, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9055477753100 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:45 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:45 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:45 - INFO: Sending 46, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9055726393087 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:45 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:45 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:45 - INFO: Sending 46, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9055976554666 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:45 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:45 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:45 - INFO: Sending 46, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9056227206118 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:45 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:45 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:45 - INFO: Sending 46, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9056479386601 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:46 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:46 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:46 - INFO: Sending 46, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9056727142713 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:46 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:46 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:46 - INFO: Sending 46, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9056977339900 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:46 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:46 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:46 - INFO: Sending 46, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9057228125068 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:46 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:46 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:46 - INFO: Sending 46, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9057478061067 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:47 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:47 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:47 - INFO: Sending 46, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9057726821926 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:47 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:47 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:47 - INFO: Sending 46, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9057976929230 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:47 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:47 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:47 - INFO: Sending 46, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9058229258148 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:47 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:47 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:47 - INFO: Sending 46, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9058478592957 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:48 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:48 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:48 - INFO: Sending 46, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9058730380624 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:48 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:48 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:48 - INFO: Sending 46, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9058978935605 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:48 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:48 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:48 - INFO: Sending 46, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9059229502010 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:48 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:48 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:48 - INFO: Sending 46, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9059479658387 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:49 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:49 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:49 - INFO: Sending 46, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9059730532964 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:49 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:49 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:49 - INFO: Sending 46, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9059979803346 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:49 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:49 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:49 - INFO: Sending 46, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9060226385390 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:49 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:49 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:49 - INFO: Sending 46, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9060477482280 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:50 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:50 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:50 - INFO: Sending 46, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9060726974937 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:50 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:50 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:50 - INFO: Sending 46, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9060976292700 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:50 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:50 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:50 - INFO: Sending 46, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9061228922520 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:50 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:50 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:50 - INFO: Sending 46, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9061476912979 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:51 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:51 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:51 - INFO: Sending 46, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9061726363590 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:51 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:51 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:51 - INFO: Sending 46, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9061977818295 } } -> udp_client/src/main.rs-356
+2022-05-16 23:41:51 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-378
+2022-05-16 23:41:51 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-381
+2022-05-16 23:41:51 - INFO: Sending 46, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 9062226860981 } } -> udp_client/src/main.rs-356
