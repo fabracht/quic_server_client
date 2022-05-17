@@ -7,9 +7,9 @@ use dashmap::DashMap;
 use quiche::ConnectionId;
 use ring::hmac::Key;
 use ring::rand::SystemRandom;
-use std::borrow::BorrowMut;
+
 use std::collections::HashMap;
-use std::io::{BufRead, BufReader};
+// use std::io::{BufRead};
 use std::net::SocketAddr;
 
 use std::sync::Arc;
@@ -111,7 +111,7 @@ impl Actor for UdpServerActor {
         let socket = Arc::clone(&self.sink_write);
         let _address = socket.local_addr();
 
-        ctx.run_interval(Duration::from_millis(1000), |a, _c| {
+        ctx.run_interval(Duration::from_millis(5000), |a, _c| {
             a.clients.retain(|_, c| {
                 debug!("Collecting garbage");
 

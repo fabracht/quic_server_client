@@ -282,7 +282,7 @@
 ////////////////////////////////////////////////////////
 
 use log::{debug, error, info, warn};
-use quiche::{h3::Header, Config, Connection};
+use quiche::{Config, Connection};
 use ring::rand::{SecureRandom, SystemRandom};
 use std::{
     io::{self, Write, BufWriter},
@@ -291,7 +291,7 @@ use std::{
     time::Duration,
 };
 use tokio::{net::UdpSocket};
-use tokio::sync::{mpsc};
+
 const MAX_DATAGRAM_SIZE: usize = 1350;
 const HTTP_REQ_STREAM_ID: u64 = 4;
 pub const USER_AGENT: &[u8] = b"quiche-http3-integration-client";
@@ -381,7 +381,7 @@ impl Client {
     
         let t = self.connection.recv(&mut buf[..value], recv_info).unwrap();
         info!("{:?} bytes received from {:?}", t, recv_info.from);
-        let p = self.peer_address.ip().to_string();
+        let _p = self.peer_address.ip().to_string();
         #[allow(unused_assignments)]
         if self.connection.is_established() && !self.req_sent {
             error!("sending HTTP request for {}", recv_info.from);
@@ -466,7 +466,7 @@ async fn main() -> io::Result<()> {
     config.load_priv_key_from_pem_file("./key.pem").unwrap();
     
     
-    let (tx, rx) = futures::channel::oneshot::channel::<ClientMessage>();
+    let (_tx, rx) = futures::channel::oneshot::channel::<ClientMessage>();
 
     let mut connection_client = Client::new(&mut config, peer_address, sock, rx);
     let mut interval = tokio::time::interval(Duration::from_nanos(25));
