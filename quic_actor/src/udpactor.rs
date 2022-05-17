@@ -487,7 +487,7 @@ fn handle_writable(client: &mut Client, stream_id: u64) {
 
     let resp = client.partial_responses.get_mut(&stream_id).unwrap();
     let body = &resp.body[resp.written..];
-    error!("There's still {} bytes to write", body.len());
+    warn!("There's still {} bytes to write", body.len());
     let written = match conn.stream_send(stream_id, body, true) {
         Ok(v) => v,
 
