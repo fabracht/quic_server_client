@@ -36,6 +36,7 @@ fn main() -> Result<(), Box<dyn Error + Sync + Send + 'static>> {
     config.set_initial_max_streams_uni(1000);
     config.set_disable_active_migration(true);
     config.enable_early_data();
+    config.enable_dgram(true, 1000, 1000);
     let _rng = SystemRandom::new();
 
     let (tx, mut rx) = tokio::sync::mpsc::channel::<Addr<UdpServerActor>>(1024);
