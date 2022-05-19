@@ -3,6 +3,7 @@ mod messages;
 
 use actix::io::SinkWrite;
 use actix::{Actor, ActorContext, Addr, AsyncContext, Context, StreamHandler};
+use bytes::BufMut;
 use dashmap::DashMap;
 use quiche::ConnectionId;
 use ring::hmac::Key;
@@ -21,6 +22,8 @@ use log::{debug, error, info, trace, warn};
 use tokio::net::UdpSocket;
 use tokio_util::codec::{self};
 use tokio_util::udp::UdpFramed;
+
+use crate::MAX_DATAGRAM_SIZE;
 #[allow(dead_code)]
 type UdpSink = SinkWrite<
     (bytes::BytesMut, SocketAddr),
@@ -76,7 +79,7 @@ impl UdpServerActor {
         let out = Vec::from(pkt_buf);
         let fut = async move {
             match sink_clone.send_to(&out[..len], socket_address).await {
-                Ok(v) => info!("Successfuly sent {} bytes", v),
+                Ok(v) => error!("Successfuly sent {} bytes", v),
                 Err(e) => {
                     if e.kind() == std::io::ErrorKind::WouldBlock {
                         debug!("send() would block");
@@ -112,9 +115,8 @@ impl Actor for UdpServerActor {
         let _address = socket.local_addr();
 
         ctx.run_interval(Duration::from_millis(5000), |a, _c| {
-            a.clients.retain(|_, c| {
-                debug!("Collecting garbage");
-
+            a.clients.retain(|id, c| {
+                // info!("Collecting garbage from {:?}", id);
                 if c.conn.is_closed() {
                     error!(
                         "{} connection collected {:?}",
@@ -141,7 +143,7 @@ impl StreamHandler<Result<(bytes::BytesMut, std::net::SocketAddr), std::io::Erro
                 let len = message.len();
 
                 let mut pkt_buf = &mut message[..len];
-
+                
                 let header_option =
                     match quiche::Header::from_slice(pkt_buf, quiche::MAX_CONN_ID_LEN) {
                         Ok(v) => Some(v),
@@ -153,14 +155,18 @@ impl StreamHandler<Result<(bytes::BytesMut, std::net::SocketAddr), std::io::Erro
                 info!("Got packet {:?}", header_option);
                 /////////////////////////////////////////
                 /////////////////////////////////////////
-
+                ///// MATCH QUIC HEADER
                 /////////////////////////////////////////
                 /////////////////////////////////////////
                 if let Some(hdr) = header_option {
                     let conn_id = ring::hmac::sign(&self.conn_id_seed, &hdr.dcid);
                     let conn_id = &conn_id.as_ref()[..quiche::MAX_CONN_ID_LEN];
                     let conn_id = conn_id.to_vec().into();
-
+                    /////////////////////////////////////////
+                    /////////////////////////////////////////
+                    ///// CLIENT CREATION
+                    /////////////////////////////////////////
+                    /////////////////////////////////////////
                     let mut client = if !self.clients.contains_key(&hdr.dcid)
                         && !self.clients.contains_key(&conn_id)
                     {
@@ -240,6 +246,12 @@ impl StreamHandler<Result<(bytes::BytesMut, std::net::SocketAddr), std::io::Erro
                             }
                         }
                     };
+
+                    /////////////////////////////////////////
+                    /////////////////////////////////////////
+                    ///// READ INCOMING DATA
+                    /////////////////////////////////////////
+                    /////////////////////////////////////////
                     let recv_info = quiche::RecvInfo {
                         from: socket_address,
                     };
@@ -283,6 +295,7 @@ impl StreamHandler<Result<(bytes::BytesMut, std::net::SocketAddr), std::io::Erro
                 };
 
                 for mut client_ref in self.clients.iter_mut() {
+                    warn!("Handling early established");
                     handle_early_established(&mut client_ref, pkt_buf);
                     loop {
                         // let client = client_ref.value_mut();
@@ -290,7 +303,7 @@ impl StreamHandler<Result<(bytes::BytesMut, std::net::SocketAddr), std::io::Erro
                             Ok(v) => v,
 
                             Err(quiche::Error::Done) => {
-                                trace!("{} done writing", client_ref.conn.trace_id());
+                                error!("{} done writing", client_ref.conn.trace_id());
                                 break;
                             }
 
@@ -304,9 +317,10 @@ impl StreamHandler<Result<(bytes::BytesMut, std::net::SocketAddr), std::io::Erro
 
                         if self.send_to(write, pkt_buf, send_info.to) == false {
                             break;
+                        } else {
+                            warn!("{} written {} bytes", client_ref.conn.trace_id(), write);
                         }
 
-                        warn!("{} written {} bytes", client_ref.conn.trace_id(), write);
                         // std::thread::sleep(Duration::from_millis(250));
                     }
                 }
@@ -319,7 +333,10 @@ impl StreamHandler<Result<(bytes::BytesMut, std::net::SocketAddr), std::io::Erro
     }
 }
 
-fn handle_early_established(client_ref: &mut dashmap::mapref::multiple::RefMutMulti<ConnectionId, Client>, mut pkt_buf: &mut [u8]) {
+fn handle_early_established(
+    client_ref: &mut dashmap::mapref::multiple::RefMutMulti<ConnectionId, Client>,
+    mut pkt_buf: &mut [u8],
+) {
     if client_ref.conn.is_in_early_data() || client_ref.conn.is_established() {
         trace!("Connection is Established");
 
@@ -448,7 +465,6 @@ fn handle_stream(client: &mut Client, stream_id: u64, buf: &[u8], root: &str) {
         // let file = std::fs::File::open(file_name).unwrap();
         // let buf_read = BufReader::new(file);
 
-
         // let body = buf_read.buffer();
         error!(
             "{} sending response of size {} on stream {}",
@@ -456,7 +472,7 @@ fn handle_stream(client: &mut Client, stream_id: u64, buf: &[u8], root: &str) {
             body.len(),
             stream_id
         );
-        let written = match conn.stream_send(stream_id,&body, true) {
+        let written = match conn.stream_send(stream_id, &body, true) {
             Ok(v) => v,
 
             Err(quiche::Error::Done) => 0,
@@ -468,28 +484,31 @@ fn handle_stream(client: &mut Client, stream_id: u64, buf: &[u8], root: &str) {
         };
 
         if written < body.len() {
-            let response = PartialResponse { body: body.to_vec(), written };
+            let response = PartialResponse {
+                body: body.to_vec(),
+                written,
+            };
             client.partial_responses.insert(stream_id, response);
         }
     }
 }
 
 /// Handles newly writable streams.
-fn handle_writable(client: &mut Client, stream_id: u64) {
+fn handle_writable(client: &mut Client, stream_id: u64) -> usize {
     let conn = &mut client.conn;
 
-    debug!("{} stream {} is writable", conn.trace_id(), stream_id);
+    warn!("{} stream {} is writable", conn.trace_id(), stream_id);
 
     if !client.partial_responses.contains_key(&stream_id) {
-        return;
+        return 0;
     }
 
     let resp = client.partial_responses.get_mut(&stream_id).unwrap();
     let body = &resp.body[resp.written..];
     warn!("There's still {} bytes to write", body.len());
-    info!("Unsafe stream is {}", unsafe {
-        std::str::from_utf8_unchecked(body)
-    });
+    // info!("Unsafe stream is {}", unsafe {
+    //     std::str::from_utf8_unchecked(body)
+    // });
     let written = match conn.stream_send(stream_id, body, false) {
         Ok(v) => v,
 
@@ -499,13 +518,15 @@ fn handle_writable(client: &mut Client, stream_id: u64) {
             client.partial_responses.remove(&stream_id);
 
             error!("{} stream send failed {:?}", conn.trace_id(), e);
-            return;
+            return 0;
         }
     };
+    warn!("Wrote {} bytes", written);
 
     resp.written += written;
 
     if resp.written == resp.body.len() {
         client.partial_responses.remove(&stream_id);
     }
+    written
 }
