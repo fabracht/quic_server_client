@@ -1,51 +1,207 @@
-2022-05-17 07:57:09 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-380
-2022-05-17 07:57:09 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-383
-2022-05-17 07:57:09 - INFO: Sending 43, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 38781761814731 } } -> udp_client/src/main.rs-357
-2022-05-17 07:57:09 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-380
-2022-05-17 07:57:09 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-383
-2022-05-17 07:57:09 - INFO: Sending 43, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 38781764175822 } } -> udp_client/src/main.rs-357
-2022-05-17 07:57:09 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-380
-2022-05-17 07:57:09 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-383
-2022-05-17 07:57:09 - INFO: Sending 43, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 38781766951411 } } -> udp_client/src/main.rs-357
-2022-05-17 07:57:09 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-380
-2022-05-17 07:57:09 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-383
-2022-05-17 07:57:09 - INFO: Sending 44, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 38781771006122 } } -> udp_client/src/main.rs-357
-2022-05-17 07:57:10 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-380
-2022-05-17 07:57:10 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-383
-2022-05-17 07:57:10 - INFO: Sending 43, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 38781775263886 } } -> udp_client/src/main.rs-357
-2022-05-17 07:57:10 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-380
-2022-05-17 07:57:10 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-383
-2022-05-17 07:57:10 - INFO: Sending 43, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 38781778001302 } } -> udp_client/src/main.rs-357
-2022-05-17 07:57:10 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-380
-2022-05-17 07:57:10 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-383
-2022-05-17 07:57:10 - INFO: Sending 43, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 38781779278254 } } -> udp_client/src/main.rs-357
-2022-05-17 07:57:10 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-380
-2022-05-17 07:57:10 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-383
-2022-05-17 07:57:10 - INFO: Sending 43, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 38781783770029 } } -> udp_client/src/main.rs-357
-2022-05-17 07:57:10 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-380
-2022-05-17 07:57:10 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-383
-2022-05-17 07:57:10 - INFO: Sending 43, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 38781786257474 } } -> udp_client/src/main.rs-357
-2022-05-17 07:57:10 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-380
-2022-05-17 07:57:10 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-383
-2022-05-17 07:57:10 - INFO: Sending 44, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 38781792175823 } } -> udp_client/src/main.rs-357
-2022-05-17 07:57:10 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-380
-2022-05-17 07:57:10 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-383
-2022-05-17 07:57:10 - INFO: Sending 44, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 38781803365113 } } -> udp_client/src/main.rs-357
-2022-05-17 07:57:10 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-380
-2022-05-17 07:57:10 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-383
-2022-05-17 07:57:10 - INFO: Sending 43, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 38781810185864 } } -> udp_client/src/main.rs-357
-2022-05-17 07:57:10 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-380
-2022-05-17 07:57:10 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-383
-2022-05-17 07:57:10 - INFO: Sending 43, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 38781812845878 } } -> udp_client/src/main.rs-357
-2022-05-17 07:57:10 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-380
-2022-05-17 07:57:10 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-383
-2022-05-17 07:57:10 - INFO: Sending 44, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 38781818611780 } } -> udp_client/src/main.rs-357
-2022-05-17 07:57:10 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-380
-2022-05-17 07:57:10 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-383
-2022-05-17 07:57:10 - INFO: Sending 43, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 38781825261885 } } -> udp_client/src/main.rs-357
-2022-05-17 07:57:10 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-380
-2022-05-17 07:57:10 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-383
-2022-05-17 07:57:10 - INFO: Sending 44, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 38781829114540 } } -> udp_client/src/main.rs-357
-2022-05-17 07:57:10 - INFO: Received info RecvInfo { from: 127.0.0.1:4480 } -> udp_client/src/main.rs-380
-2022-05-17 07:57:10 - INFO: 43 bytes received from 127.0.0.1:4480 -> udp_client/src/main.rs-383
-2022-05-17 07:57:10 - INFO: Sending 43, with info: SendInfo { to: 127.0.0.1:4480, at: Instant { t: 38781833838189 } } -> udp_client/src/main.rs-357
+2022-05-19 18:07:08 - WARN: 9ad073a50db1ef22758ebe2c56966b3b000b8ba9 written 44 bytes -> quic_actor/src/udpactor.rs-309
+2022-05-19 18:07:08 - INFO: Successfuly sent 44 bytes -> quic_actor/src/udpactor.rs-79
+2022-05-19 18:07:08 - INFO: Got packet Some(Short dcid=9ad073a50db1ef22758ebe2c56966b3b000b8ba9 key_phase=false) -> quic_actor/src/udpactor.rs-153
+2022-05-19 18:07:08 - INFO: Client found -> quic_actor/src/udpactor.rs-233
+2022-05-19 18:07:08 - INFO: 9ad073a50db1ef22758ebe2c56966b3b000b8ba9 processed 44 bytes -> quic_actor/src/udpactor.rs-255
+2022-05-19 18:07:08 - WARN: There's still 21949 bytes to write -> quic_actor/src/udpactor.rs-489
+2022-05-19 18:07:08 - INFO: Unsafe stream is nstitutionis oblita est?
+Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt;
+Hoc est non modo cor non habere, sed ne palatum quidem.
+Voluptatem cum summum bonum diceret, primum in eo ipso parum vidit, deinde hoc quoque alienum; Sed tu istuc dixti bene Latine, parum plane. Nam haec ipsa mihi erunt in promptu, quae modo audivi, nec ante aggrediar, quam te ab istis, quos dicis, instructum videro. Fatebuntur Stoici haec omnia dicta esse praeclare, neque eam causam Zenoni desciscendi fuisse. Non autem hoc: igitur ne illud quidem. Ratio quidem vestra sic cogit. Cum audissem Antiochum, Brute, ut solebam, cum M. An quod ita callida est, ut optime possit architectari voluptates?
+
+Idemne, quod iucunde?
+Haec mihi videtur delicatior, ut ita dicam, molliorque ratio, quam virtutis vis gravitasque postulat. Sed quoniam et advesperascit et mihi ad villam revertendum est, nunc quidem hactenus; Cuius ad naturam apta ratio vera illa et summa lex a philosophis dicitur. Neque solum ea communia, verum etiam paria esse dixerunt. Sed nunc, quod agimus; A mene tu?
+Quod equidem non reprehendo;
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quibus natura iure responderit non esse verum aliunde finem beate vivendi, a se principia rei gerendae peti; Quae enim adhuc protulisti, popularia sunt, ego autem a te elegantiora desidero. Duo Reges: constructio interrete. Tum Lucius: Mihi vero ista valde probata sunt, quod item fratri puto. Bestiarum vero nullum iudicium puto. Nihil enim iam habes, quod ad corpus referas; Deinde prima illa, quae in congressu solemus: Quid tu, inquit, huc? Et homini, qui ceteris animantibus plurimum praestat, praecipue a natura nihil datum esse dicemus?
+
+Iam id ipsum absurdum, maximum malum neglegi. Quod ea non occurrentia fingunt, vincunt Aristonem; Atqui perspicuum est hominem e corpore animoque constare, cum primae sint animi partes, secundae corporis. Fieri, inquam, Triari, nullo pacto potest, ut non dicas, quid non probes eius, a quo dissentias. Equidem e Cn. An dubium est, quin virtus ita maximam partem optineat in rebus humanis, ut reliquas obruat?
+
+Quis istum dolorem timet?
+Summus dolor plures dies manere non potest? Dicet pro me ipsa virtus nec dubitabit isti vestro beato M. Tubulum fuisse, qua illum, cuius is condemnatus est rogatione, P. Quod si ita sit, cur opera philosophiae sit danda nescio.
+
+Ex eorum enim scriptis et institutis cum omnis doctrina liberalis, omnis historia.
+Quod si ita est, sequitur id ipsum, quod te velle video, omnes semper beatos esse sapientes. Cum enim fertur quasi torrens oratio, quamvis multa cuiusque modi rapiat, nihil tamen teneas, nihil apprehendas, nusquam orationem rapidam coerceas. Ita redarguitur ipse a sese, convincunturque scripta eius probitate ipsius ac moribus. At quanta conantur! Mundum hunc omnem oppidum esse nostrum! Incendi igitur eos, qui audiunt, vides. Vide, ne magis, inquam, tuum fuerit, cum re idem tibi, quod mihi, videretur, non nova te rebus nomina inponere. Qui-vere falsone, quaerere mittimus-dicitur oculis se privasse; Si ista mala sunt, in quae potest incidere sapiens, sapientem esse non esse ad beate vivendum satis. At vero si ad vitem sensus accesserit, ut appetitum quendam habeat et per se ipsa moveatur, quid facturam putas?
+
+Quem si tenueris, non modo meum Ciceronem, sed etiam me ipsum abducas licebit.
+Stulti autem malorum memoria torquentur, sapientes bona praeterita grata recordatione renovata delectant.
+Esse enim quam vellet iniquus iustus poterat inpune.
+Quae autem natura suae primae institutionis oblita est?
+Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt;
+Hoc est non modo cor non habere, sed ne palatum quidem.
+Voluptatem cum summum bonum diceret, primum in eo ipso parum vidit, deinde hoc quoque alienum; Sed tu istuc dixti bene Latine, parum plane. Nam haec ipsa mihi erunt in promptu, quae modo audivi, nec ante aggrediar, quam te ab istis, quos dicis, instructum videro. Fatebuntur Stoici haec omnia dicta esse praeclare, neque eam causam Zenoni desciscendi fuisse. Non autem hoc: igitur ne illud quidem. Ratio quidem vestra sic cogit. Cum audissem Antiochum, Brute, ut solebam, cum M. An quod ita callida est, ut optime possit architectari voluptates?
+
+Idemne, quod iucunde?
+Haec mihi videtur delicatior, ut ita dicam, molliorque ratio, quam virtutis vis gravitasque postulat. Sed quoniam et advesperascit et mihi ad villam revertendum est, nunc quidem hactenus; Cuius ad naturam apta ratio vera illa et summa lex a philosophis dicitur. Neque solum ea communia, verum etiam paria esse dixerunt. Sed nunc, quod agimus; A mene tu?
+Quod equidem non reprehendo;
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quibus natura iure responderit non esse verum aliunde finem beate vivendi, a se principia rei gerendae peti; Quae enim adhuc protulisti, popularia sunt, ego autem a te elegantiora desidero. Duo Reges: constructio interrete. Tum Lucius: Mihi vero ista valde probata sunt, quod item fratri puto. Bestiarum vero nullum iudicium puto. Nihil enim iam habes, quod ad corpus referas; Deinde prima illa, quae in congressu solemus: Quid tu, inquit, huc? Et homini, qui ceteris animantibus plurimum praestat, praecipue a natura nihil datum esse dicemus?
+
+Iam id ipsum absurdum, maximum malum neglegi. Quod ea non occurrentia fingunt, vincunt Aristonem; Atqui perspicuum est hominem e corpore animoque constare, cum primae sint animi partes, secundae corporis. Fieri, inquam, Triari, nullo pacto potest, ut non dicas, quid non probes eius, a quo dissentias. Equidem e Cn. An dubium est, quin virtus ita maximam partem optineat in rebus humanis, ut reliquas obruat?
+
+Quis istum dolorem timet?
+Summus dolor plures dies manere non potest? Dicet pro me ipsa virtus nec dubitabit isti vestro beato M. Tubulum fuisse, qua illum, cuius is condemnatus est rogatione, P. Quod si ita sit, cur opera philosophiae sit danda nescio.
+
+Ex eorum enim scriptis et institutis cum omnis doctrina liberalis, omnis historia.
+Quod si ita est, sequitur id ipsum, quod te velle video, omnes semper beatos esse sapientes. Cum enim fertur quasi torrens oratio, quamvis multa cuiusque modi rapiat, nihil tamen teneas, nihil apprehendas, nusquam orationem rapidam coerceas. Ita redarguitur ipse a sese, convincunturque scripta eius probitate ipsius ac moribus. At quanta conantur! Mundum hunc omnem oppidum esse nostrum! Incendi igitur eos, qui audiunt, vides. Vide, ne magis, inquam, tuum fuerit, cum re idem tibi, quod mihi, videretur, non nova te rebus nomina inponere. Qui-vere falsone, quaerere mittimus-dicitur oculis se privasse; Si ista mala sunt, in quae potest incidere sapiens, sapientem esse non esse ad beate vivendum satis. At vero si ad vitem sensus accesserit, ut appetitum quendam habeat et per se ipsa moveatur, quid facturam putas?
+
+Quem si tenueris, non modo meum Ciceronem, sed etiam me ipsum abducas licebit.
+Stulti autem malorum memoria torquentur, sapientes bona praeterita grata recordatione renovata delectant.
+Esse enim quam vellet iniquus iustus poterat inpune.
+Quae autem natura suae primae institutionis oblita est?
+Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt;
+Hoc est non modo cor non habere, sed ne palatum quidem.
+Voluptatem cum summum bonum diceret, primum in eo ipso parum vidit, deinde hoc quoque alienum; Sed tu istuc dixti bene Latine, parum plane. Nam haec ipsa mihi erunt in promptu, quae modo audivi, nec ante aggrediar, quam te ab istis, quos dicis, instructum videro. Fatebuntur Stoici haec omnia dicta esse praeclare, neque eam causam Zenoni desciscendi fuisse. Non autem hoc: igitur ne illud quidem. Ratio quidem vestra sic cogit. Cum audissem Antiochum, Brute, ut solebam, cum M. An quod ita callida est, ut optime possit architectari voluptates?
+
+Idemne, quod iucunde?
+Haec mihi videtur delicatior, ut ita dicam, molliorque ratio, quam virtutis vis gravitasque postulat. Sed quoniam et advesperascit et mihi ad villam revertendum est, nunc quidem hactenus; Cuius ad naturam apta ratio vera illa et summa lex a philosophis dicitur. Neque solum ea communia, verum etiam paria esse dixerunt. Sed nunc, quod agimus; A mene tu?
+Quod equidem non reprehendo;
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quibus natura iure responderit non esse verum aliunde finem beate vivendi, a se principia rei gerendae peti; Quae enim adhuc protulisti, popularia sunt, ego autem a te elegantiora desidero. Duo Reges: constructio interrete. Tum Lucius: Mihi vero ista valde probata sunt, quod item fratri puto. Bestiarum vero nullum iudicium puto. Nihil enim iam habes, quod ad corpus referas; Deinde prima illa, quae in congressu solemus: Quid tu, inquit, huc? Et homini, qui ceteris animantibus plurimum praestat, praecipue a natura nihil datum esse dicemus?
+
+Iam id ipsum absurdum, maximum malum neglegi. Quod ea non occurrentia fingunt, vincunt Aristonem; Atqui perspicuum est hominem e corpore animoque constare, cum primae sint animi partes, secundae corporis. Fieri, inquam, Triari, nullo pacto potest, ut non dicas, quid non probes eius, a quo dissentias. Equidem e Cn. An dubium est, quin virtus ita maximam partem optineat in rebus humanis, ut reliquas obruat?
+
+Quis istum dolorem timet?
+Summus dolor plures dies manere non potest? Dicet pro me ipsa virtus nec dubitabit isti vestro beato M. Tubulum fuisse, qua illum, cuius is condemnatus est rogatione, P. Quod si ita sit, cur opera philosophiae sit danda nescio.
+
+Ex eorum enim scriptis et institutis cum omnis doctrina liberalis, omnis historia.
+Quod si ita est, sequitur id ipsum, quod te velle video, omnes semper beatos esse sapientes. Cum enim fertur quasi torrens oratio, quamvis multa cuiusque modi rapiat, nihil tamen teneas, nihil apprehendas, nusquam orationem rapidam coerceas. Ita redarguitur ipse a sese, convincunturque scripta eius probitate ipsius ac moribus. At quanta conantur! Mundum hunc omnem oppidum esse nostrum! Incendi igitur eos, qui audiunt, vides. Vide, ne magis, inquam, tuum fuerit, cum re idem tibi, quod mihi, videretur, non nova te rebus nomina inponere. Qui-vere falsone, quaerere mittimus-dicitur oculis se privasse; Si ista mala sunt, in quae potest incidere sapiens, sapientem esse non esse ad beate vivendum satis. At vero si ad vitem sensus accesserit, ut appetitum quendam habeat et per se ipsa moveatur, quid facturam putas?
+
+Quem si tenueris, non modo meum Ciceronem, sed etiam me ipsum abducas licebit.
+Stulti autem malorum memoria torquentur, sapientes bona praeterita grata recordatione renovata delectant.
+Esse enim quam vellet iniquus iustus poterat inpune.
+Quae autem natura suae primae institutionis oblita est?
+Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt;
+Hoc est non modo cor non habere, sed ne palatum quidem.
+Voluptatem cum summum bonum diceret, primum in eo ipso parum vidit, deinde hoc quoque alienum; Sed tu istuc dixti bene Latine, parum plane. Nam haec ipsa mihi erunt in promptu, quae modo audivi, nec ante aggrediar, quam te ab istis, quos dicis, instructum videro. Fatebuntur Stoici haec omnia dicta esse praeclare, neque eam causam Zenoni desciscendi fuisse. Non autem hoc: igitur ne illud quidem. Ratio quidem vestra sic cogit. Cum audissem Antiochum, Brute, ut solebam, cum M. An quod ita callida est, ut optime possit architectari voluptates?
+
+Idemne, quod iucunde?
+Haec mihi videtur delicatior, ut ita dicam, molliorque ratio, quam virtutis vis gravitasque postulat. Sed quoniam et advesperascit et mihi ad villam revertendum est, nunc quidem hactenus; Cuius ad naturam apta ratio vera illa et summa lex a philosophis dicitur. Neque solum ea communia, verum etiam paria esse dixerunt. Sed nunc, quod agimus; A mene tu?
+Quod equidem non reprehendo;
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quibus natura iure responderit non esse verum aliunde finem beate vivendi, a se principia rei gerendae peti; Quae enim adhuc protulisti, popularia sunt, ego autem a te elegantiora desidero. Duo Reges: constructio interrete. Tum Lucius: Mihi vero ista valde probata sunt, quod item fratri puto. Bestiarum vero nullum iudicium puto. Nihil enim iam habes, quod ad corpus referas; Deinde prima illa, quae in congressu solemus: Quid tu, inquit, huc? Et homini, qui ceteris animantibus plurimum praestat, praecipue a natura nihil datum esse dicemus?
+
+Iam id ipsum absurdum, maximum malum neglegi. Quod ea non occurrentia fingunt, vincunt Aristonem; Atqui perspicuum est hominem e corpore animoque constare, cum primae sint animi partes, secundae corporis. Fieri, inquam, Triari, nullo pacto potest, ut non dicas, quid non probes eius, a quo dissentias. Equidem e Cn. An dubium est, quin virtus ita maximam partem optineat in rebus humanis, ut reliquas obruat?
+
+Quis istum dolorem timet?
+Summus dolor plures dies manere non potest? Dicet pro me ipsa virtus nec dubitabit isti vestro beato M. Tubulum fuisse, qua illum, cuius is condemnatus est rogatione, P. Quod si ita sit, cur opera philosophiae sit danda nescio.
+
+Ex eorum enim scriptis et institutis cum omnis doctrina liberalis, omnis historia.
+Quod si ita est, sequitur id ipsum, quod te velle video, omnes semper beatos esse sapientes. Cum enim fertur quasi torrens oratio, quamvis multa cuiusque modi rapiat, nihil tamen teneas, nihil apprehendas, nusquam orationem rapidam coerceas. Ita redarguitur ipse a sese, convincunturque scripta eius probitate ipsius ac moribus. At quanta conantur! Mundum hunc omnem oppidum esse nostrum! Incendi igitur eos, qui audiunt, vides. Vide, ne magis, inquam, tuum fuerit, cum re idem tibi, quod mihi, videretur, non nova te rebus nomina inponere. Qui-vere falsone, quaerere mittimus-dicitur oculis se privasse; Si ista mala sunt, in quae potest incidere sapiens, sapientem esse non esse ad beate vivendum satis. At vero si ad vitem sensus accesserit, ut appetitum quendam habeat et per se ipsa moveatur, quid facturam putas?
+
+Quem si tenueris, non modo meum Ciceronem, sed etiam me ipsum abducas licebit.
+Stulti autem malorum memoria torquentur, sapientes bona praeterita grata recordatione renovata delectant.
+Esse enim quam vellet iniquus iustus poterat inpune.
+Quae autem natura suae primae institutionis oblita est?
+Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt;
+Hoc est non modo cor non habere, sed ne palatum quidem.
+Voluptatem cum summum bonum diceret, primum in eo ipso parum vidit, deinde hoc quoque alienum; Sed tu istuc dixti bene Latine, parum plane. Nam haec ipsa mihi erunt in promptu, quae modo audivi, nec ante aggrediar, quam te ab istis, quos dicis, instructum videro. Fatebuntur Stoici haec omnia dicta esse praeclare, neque eam causam Zenoni desciscendi fuisse. Non autem hoc: igitur ne illud quidem. Ratio quidem vestra sic cogit. Cum audissem Antiochum, Brute, ut solebam, cum M. An quod ita callida est, ut optime possit architectari voluptates?
+
+Idemne, quod iucunde?
+Haec mihi videtur delicatior, ut ita dicam, molliorque ratio, quam virtutis vis gravitasque postulat. Sed quoniam et advesperascit et mihi ad villam revertendum est, nunc quidem hactenus; Cuius ad naturam apta ratio vera illa et summa lex a philosophis dicitur. Neque solum ea communia, verum etiam paria esse dixerunt. Sed nunc, quod agimus; A mene tu?
+Quod equidem non reprehendo;
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quibus natura iure responderit non esse verum aliunde finem beate vivendi, a se principia rei gerendae peti; Quae enim adhuc protulisti, popularia sunt, ego autem a te elegantiora desidero. Duo Reges: constructio interrete. Tum Lucius: Mihi vero ista valde probata sunt, quod item fratri puto. Bestiarum vero nullum iudicium puto. Nihil enim iam habes, quod ad corpus referas; Deinde prima illa, quae in congressu solemus: Quid tu, inquit, huc? Et homini, qui ceteris animantibus plurimum praestat, praecipue a natura nihil datum esse dicemus?
+
+Iam id ipsum absurdum, maximum malum neglegi. Quod ea non occurrentia fingunt, vincunt Aristonem; Atqui perspicuum est hominem e corpore animoque constare, cum primae sint animi partes, secundae corporis. Fieri, inquam, Triari, nullo pacto potest, ut non dicas, quid non probes eius, a quo dissentias. Equidem e Cn. An dubium est, quin virtus ita maximam partem optineat in rebus humanis, ut reliquas obruat?
+
+Quis istum dolorem timet?
+Summus dolor plures dies manere non potest? Dicet pro me ipsa virtus nec dubitabit isti vestro beato M. Tubulum fuisse, qua illum, cuius is condemnatus est rogatione, P. Quod si ita sit, cur opera philosophiae sit danda nescio.
+
+Ex eorum enim scriptis et institutis cum omnis doctrina liberalis, omnis historia.
+Quod si ita est, sequitur id ipsum, quod te velle video, omnes semper beatos esse sapientes. Cum enim fertur quasi torrens oratio, quamvis multa cuiusque modi rapiat, nihil tamen teneas, nihil apprehendas, nusquam orationem rapidam coerceas. Ita redarguitur ipse a sese, convincunturque scripta eius probitate ipsius ac moribus. At quanta conantur! Mundum hunc omnem oppidum esse nostrum! Incendi igitur eos, qui audiunt, vides. Vide, ne magis, inquam, tuum fuerit, cum re idem tibi, quod mihi, videretur, non nova te rebus nomina inponere. Qui-vere falsone, quaerere mittimus-dicitur oculis se privasse; Si ista mala sunt, in quae potest incidere sapiens, sapientem esse non esse ad beate vivendum satis. At vero si ad vitem sensus accesserit, ut appetitum quendam habeat et per se ipsa moveatur, quid facturam putas?
+
+Quem si tenueris, non modo meum Ciceronem, sed etiam me ipsum abducas licebit.
+Stulti autem malorum memoria torquentur, sapientes bona praeterita grata recordatione renovata delectant.
+Esse enim quam vellet iniquus iustus poterat inpune.
+Quae autem natura suae primae institutionis oblita est?
+Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt;
+Hoc est non modo cor non habere, sed ne palatum quidem.
+Voluptatem cum summum bonum diceret, primum in eo ipso parum vidit, deinde hoc quoque alienum; Sed tu istuc dixti bene Latine, parum plane. Nam haec ipsa mihi erunt in promptu, quae modo audivi, nec ante aggrediar, quam te ab istis, quos dicis, instructum videro. Fatebuntur Stoici haec omnia dicta esse praeclare, neque eam causam Zenoni desciscendi fuisse. Non autem hoc: igitur ne illud quidem. Ratio quidem vestra sic cogit. Cum audissem Antiochum, Brute, ut solebam, cum M. An quod ita callida est, ut optime possit architectari voluptates?
+
+Idemne, quod iucunde?
+Haec mihi videtur delicatior, ut ita dicam, molliorque ratio, quam virtutis vis gravitasque postulat. Sed quoniam et advesperascit et mihi ad villam revertendum est, nunc quidem hactenus; Cuius ad naturam apta ratio vera illa et summa lex a philosophis dicitur. Neque solum ea communia, verum etiam paria esse dixerunt. Sed nunc, quod agimus; A mene tu?
+Quod equidem non reprehendo;
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quibus natura iure responderit non esse verum aliunde finem beate vivendi, a se principia rei gerendae peti; Quae enim adhuc protulisti, popularia sunt, ego autem a te elegantiora desidero. Duo Reges: constructio interrete. Tum Lucius: Mihi vero ista valde probata sunt, quod item fratri puto. Bestiarum vero nullum iudicium puto. Nihil enim iam habes, quod ad corpus referas; Deinde prima illa, quae in congressu solemus: Quid tu, inquit, huc? Et homini, qui ceteris animantibus plurimum praestat, praecipue a natura nihil datum esse dicemus?
+
+Iam id ipsum absurdum, maximum malum neglegi. Quod ea non occurrentia fingunt, vincunt Aristonem; Atqui perspicuum est hominem e corpore animoque constare, cum primae sint animi partes, secundae corporis. Fieri, inquam, Triari, nullo pacto potest, ut non dicas, quid non probes eius, a quo dissentias. Equidem e Cn. An dubium est, quin virtus ita maximam partem optineat in rebus humanis, ut reliquas obruat?
+
+Quis istum dolorem timet?
+Summus dolor plures dies manere non potest? Dicet pro me ipsa virtus nec dubitabit isti vestro beato M. Tubulum fuisse, qua illum, cuius is condemnatus est rogatione, P. Quod si ita sit, cur opera philosophiae sit danda nescio.
+
+Ex eorum enim scriptis et institutis cum omnis doctrina liberalis, omnis historia.
+Quod si ita est, sequitur id ipsum, quod te velle video, omnes semper beatos esse sapientes. Cum enim fertur quasi torrens oratio, quamvis multa cuiusque modi rapiat, nihil tamen teneas, nihil apprehendas, nusquam orationem rapidam coerceas. Ita redarguitur ipse a sese, convincunturque scripta eius probitate ipsius ac moribus. At quanta conantur! Mundum hunc omnem oppidum esse nostrum! Incendi igitur eos, qui audiunt, vides. Vide, ne magis, inquam, tuum fuerit, cum re idem tibi, quod mihi, videretur, non nova te rebus nomina inponere. Qui-vere falsone, quaerere mittimus-dicitur oculis se privasse; Si ista mala sunt, in quae potest incidere sapiens, sapientem esse non esse ad beate vivendum satis. At vero si ad vitem sensus accesserit, ut appetitum quendam habeat et per se ipsa moveatur, quid facturam putas?
+
+Quem si tenueris, non modo meum Ciceronem, sed etiam me ipsum abducas licebit.
+Stulti autem malorum memoria torquentur, sapientes bona praeterita grata recordatione renovata delectant.
+Esse enim quam vellet iniquus iustus poterat inpune.
+Quae autem natura suae primae institutionis oblita est?
+Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt;
+Hoc est non modo cor non habere, sed ne palatum quidem.
+Voluptatem cum summum bonum diceret, primum in eo ipso parum vidit, deinde hoc quoque alienum; Sed tu istuc dixti bene Latine, parum plane. Nam haec ipsa mihi erunt in promptu, quae modo audivi, nec ante aggrediar, quam te ab istis, quos dicis, instructum videro. Fatebuntur Stoici haec omnia dicta esse praeclare, neque eam causam Zenoni desciscendi fuisse. Non autem hoc: igitur ne illud quidem. Ratio quidem vestra sic cogit. Cum audissem Antiochum, Brute, ut solebam, cum M. An quod ita callida est, ut optime possit architectari voluptates?
+ -> quic_actor/src/udpactor.rs-490
+2022-05-19 18:07:08 - INFO: Got packet Some(Short dcid=9ad073a50db1ef22758ebe2c56966b3b000b8ba9 key_phase=false) -> quic_actor/src/udpactor.rs-153
+2022-05-19 18:07:08 - INFO: Client found -> quic_actor/src/udpactor.rs-233
+2022-05-19 18:07:08 - INFO: 9ad073a50db1ef22758ebe2c56966b3b000b8ba9 processed 44 bytes -> quic_actor/src/udpactor.rs-255
+2022-05-19 18:07:08 - WARN: There's still 9871 bytes to write -> quic_actor/src/udpactor.rs-489
+2022-05-19 18:07:08 - INFO: Unsafe stream is . Bestiarum vero nullum iudicium puto. Nihil enim iam habes, quod ad corpus referas; Deinde prima illa, quae in congressu solemus: Quid tu, inquit, huc? Et homini, qui ceteris animantibus plurimum praestat, praecipue a natura nihil datum esse dicemus?
+
+Iam id ipsum absurdum, maximum malum neglegi. Quod ea non occurrentia fingunt, vincunt Aristonem; Atqui perspicuum est hominem e corpore animoque constare, cum primae sint animi partes, secundae corporis. Fieri, inquam, Triari, nullo pacto potest, ut non dicas, quid non probes eius, a quo dissentias. Equidem e Cn. An dubium est, quin virtus ita maximam partem optineat in rebus humanis, ut reliquas obruat?
+
+Quis istum dolorem timet?
+Summus dolor plures dies manere non potest? Dicet pro me ipsa virtus nec dubitabit isti vestro beato M. Tubulum fuisse, qua illum, cuius is condemnatus est rogatione, P. Quod si ita sit, cur opera philosophiae sit danda nescio.
+
+Ex eorum enim scriptis et institutis cum omnis doctrina liberalis, omnis historia.
+Quod si ita est, sequitur id ipsum, quod te velle video, omnes semper beatos esse sapientes. Cum enim fertur quasi torrens oratio, quamvis multa cuiusque modi rapiat, nihil tamen teneas, nihil apprehendas, nusquam orationem rapidam coerceas. Ita redarguitur ipse a sese, convincunturque scripta eius probitate ipsius ac moribus. At quanta conantur! Mundum hunc omnem oppidum esse nostrum! Incendi igitur eos, qui audiunt, vides. Vide, ne magis, inquam, tuum fuerit, cum re idem tibi, quod mihi, videretur, non nova te rebus nomina inponere. Qui-vere falsone, quaerere mittimus-dicitur oculis se privasse; Si ista mala sunt, in quae potest incidere sapiens, sapientem esse non esse ad beate vivendum satis. At vero si ad vitem sensus accesserit, ut appetitum quendam habeat et per se ipsa moveatur, quid facturam putas?
+
+Quem si tenueris, non modo meum Ciceronem, sed etiam me ipsum abducas licebit.
+Stulti autem malorum memoria torquentur, sapientes bona praeterita grata recordatione renovata delectant.
+Esse enim quam vellet iniquus iustus poterat inpune.
+Quae autem natura suae primae institutionis oblita est?
+Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt;
+Hoc est non modo cor non habere, sed ne palatum quidem.
+Voluptatem cum summum bonum diceret, primum in eo ipso parum vidit, deinde hoc quoque alienum; Sed tu istuc dixti bene Latine, parum plane. Nam haec ipsa mihi erunt in promptu, quae modo audivi, nec ante aggrediar, quam te ab istis, quos dicis, instructum videro. Fatebuntur Stoici haec omnia dicta esse praeclare, neque eam causam Zenoni desciscendi fuisse. Non autem hoc: igitur ne illud quidem. Ratio quidem vestra sic cogit. Cum audissem Antiochum, Brute, ut solebam, cum M. An quod ita callida est, ut optime possit architectari voluptates?
+
+Idemne, quod iucunde?
+Haec mihi videtur delicatior, ut ita dicam, molliorque ratio, quam virtutis vis gravitasque postulat. Sed quoniam et advesperascit et mihi ad villam revertendum est, nunc quidem hactenus; Cuius ad naturam apta ratio vera illa et summa lex a philosophis dicitur. Neque solum ea communia, verum etiam paria esse dixerunt. Sed nunc, quod agimus; A mene tu?
+Quod equidem non reprehendo;
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quibus natura iure responderit non esse verum aliunde finem beate vivendi, a se principia rei gerendae peti; Quae enim adhuc protulisti, popularia sunt, ego autem a te elegantiora desidero. Duo Reges: constructio interrete. Tum Lucius: Mihi vero ista valde probata sunt, quod item fratri puto. Bestiarum vero nullum iudicium puto. Nihil enim iam habes, quod ad corpus referas; Deinde prima illa, quae in congressu solemus: Quid tu, inquit, huc? Et homini, qui ceteris animantibus plurimum praestat, praecipue a natura nihil datum esse dicemus?
+
+Iam id ipsum absurdum, maximum malum neglegi. Quod ea non occurrentia fingunt, vincunt Aristonem; Atqui perspicuum est hominem e corpore animoque constare, cum primae sint animi partes, secundae corporis. Fieri, inquam, Triari, nullo pacto potest, ut non dicas, quid non probes eius, a quo dissentias. Equidem e Cn. An dubium est, quin virtus ita maximam partem optineat in rebus humanis, ut reliquas obruat?
+
+Quis istum dolorem timet?
+Summus dolor plures dies manere non potest? Dicet pro me ipsa virtus nec dubitabit isti vestro beato M. Tubulum fuisse, qua illum, cuius is condemnatus est rogatione, P. Quod si ita sit, cur opera philosophiae sit danda nescio.
+
+Ex eorum enim scriptis et institutis cum omnis doctrina liberalis, omnis historia.
+Quod si ita est, sequitur id ipsum, quod te velle video, omnes semper beatos esse sapientes. Cum enim fertur quasi torrens oratio, quamvis multa cuiusque modi rapiat, nihil tamen teneas, nihil apprehendas, nusquam orationem rapidam coerceas. Ita redarguitur ipse a sese, convincunturque scripta eius probitate ipsius ac moribus. At quanta conantur! Mundum hunc omnem oppidum esse nostrum! Incendi igitur eos, qui audiunt, vides. Vide, ne magis, inquam, tuum fuerit, cum re idem tibi, quod mihi, videretur, non nova te rebus nomina inponere. Qui-vere falsone, quaerere mittimus-dicitur oculis se privasse; Si ista mala sunt, in quae potest incidere sapiens, sapientem esse non esse ad beate vivendum satis. At vero si ad vitem sensus accesserit, ut appetitum quendam habeat et per se ipsa moveatur, quid facturam putas?
+
+Quem si tenueris, non modo meum Ciceronem, sed etiam me ipsum abducas licebit.
+Stulti autem malorum memoria torquentur, sapientes bona praeterita grata recordatione renovata delectant.
+Esse enim quam vellet iniquus iustus poterat inpune.
+Quae autem natura suae primae institutionis oblita est?
+Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt;
+Hoc est non modo cor non habere, sed ne palatum quidem.
+Voluptatem cum summum bonum diceret, primum in eo ipso parum vidit, deinde hoc quoque alienum; Sed tu istuc dixti bene Latine, parum plane. Nam haec ipsa mihi erunt in promptu, quae modo audivi, nec ante aggrediar, quam te ab istis, quos dicis, instructum videro. Fatebuntur Stoici haec omnia dicta esse praeclare, neque eam causam Zenoni desciscendi fuisse. Non autem hoc: igitur ne illud quidem. Ratio quidem vestra sic cogit. Cum audissem Antiochum, Brute, ut solebam, cum M. An quod ita callida est, ut optime possit architectari voluptates?
+
+Idemne, quod iucunde?
+Haec mihi videtur delicatior, ut ita dicam, molliorque ratio, quam virtutis vis gravitasque postulat. Sed quoniam et advesperascit et mihi ad villam revertendum est, nunc quidem hactenus; Cuius ad naturam apta ratio vera illa et summa lex a philosophis dicitur. Neque solum ea communia, verum etiam paria esse dixerunt. Sed nunc, quod agimus; A mene tu?
+Quod equidem non reprehendo;
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quibus natura iure responderit non esse verum aliunde finem beate vivendi, a se principia rei gerendae peti; Quae enim adhuc protulisti, popularia sunt, ego autem a te elegantiora desidero. Duo Reges: constructio interrete. Tum Lucius: Mihi vero ista valde probata sunt, quod item fratri puto. Bestiarum vero nullum iudicium puto. Nihil enim iam habes, quod ad corpus referas; Deinde prima illa, quae in congressu solemus: Quid tu, inquit, huc? Et homini, qui ceteris animantibus plurimum praestat, praecipue a natura nihil datum esse dicemus?
+
+Iam id ipsum absurdum, maximum malum neglegi. Quod ea non occurrentia fingunt, vincunt Aristonem; Atqui perspicuum est hominem e corpore animoque constare, cum primae sint animi partes, secundae corporis. Fieri, inquam, Triari, nullo pacto potest, ut non dicas, quid non probes eius, a quo dissentias. Equidem e Cn. An dubium est, quin virtus ita maximam partem optineat in rebus humanis, ut reliquas obruat?
+
+Quis istum dolorem timet?
+Summus dolor plures dies manere non potest? Dicet pro me ipsa virtus nec dubitabit isti vestro beato M. Tubulum fuisse, qua illum, cuius is condemnatus est rogatione, P. Quod si ita sit, cur opera philosophiae sit danda nescio.
+
+Ex eorum enim scriptis et institutis cum omnis doctrina liberalis, omnis historia.
+Quod si ita est, sequitur id ipsum, quod te velle video, omnes semper beatos esse sapientes. Cum enim fertur quasi torrens oratio, quamvis multa cuiusque modi rapiat, nihil tamen teneas, nihil apprehendas, nusquam orationem rapidam coerceas. Ita redarguitur ipse a sese, convincunturque scripta eius probitate ipsius ac moribus. At quanta conantur! Mundum hunc omnem oppidum esse nostrum! Incendi igitur eos, qui audiunt, vides. Vide, ne magis, inquam, tuum fuerit, cum re idem tibi, quod mihi, videretur, non nova te rebus nomina inponere. Qui-vere falsone, quaerere mittimus-dicitur oculis se privasse; Si ista mala sunt, in quae potest incidere sapiens, sapientem esse non esse ad beate vivendum satis. At vero si ad vitem sensus accesserit, ut appetitum quendam habeat et per se ipsa moveatur, quid facturam putas?
+
+Quem si tenueris, non modo meum Ciceronem, sed etiam me ipsum abducas licebit.
+Stulti autem malorum memoria torquentur, sapientes bona praeterita grata recordatione renovata delectant.
+Esse enim quam vellet iniquus iustus poterat inpune.
+Quae autem natura suae primae institutionis oblita est?
+Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt;
+Hoc est non modo cor non habere, sed ne palatum quidem.
+Voluptatem cum summum bonum diceret, primum in eo ipso parum vidit, deinde hoc quoque alienum; Sed tu istuc dixti bene Latine, parum plane. Nam haec ipsa mihi erunt in promptu, quae modo audivi, nec ante aggrediar, quam te ab istis, quos dicis, instructum videro. Fatebuntur Stoici haec omnia dicta esse praeclare, neque eam causam Zenoni desciscendi fuisse. Non autem hoc: igitur ne illud quidem. Ratio quidem vestra sic cogit. Cum audissem Antiochum, Brute, ut solebam, cum M. An quod ita callida est, ut optime possit architectari voluptates?
+ -> quic_actor/src/udpactor.rs-490
+2022-05-19 18:07:08 - INFO: Got packet Some(Short dcid=9ad073a50db1ef22758ebe2c56966b3b000b8ba9 key_phase=false) -> quic_actor/src/udpactor.rs-153
+2022-05-19 18:07:08 - INFO: Client found -> quic_actor/src/udpactor.rs-233
+2022-05-19 18:07:08 - INFO: 9ad073a50db1ef22758ebe2c56966b3b000b8ba9 processed 44 bytes -> quic_actor/src/udpactor.rs-255
+2022-05-19 18:07:08 - INFO: Got packet Some(Short dcid=9ad073a50db1ef22758ebe2c56966b3b000b8ba9 key_phase=false) -> quic_actor/src/udpactor.rs-153
+2022-05-19 18:07:08 - INFO: Client found -> quic_actor/src/udpactor.rs-233
+2022-05-19 18:07:08 - INFO: 9ad073a50db1ef22758ebe2c56966b3b000b8ba9 processed 43 bytes -> quic_actor/src/udpactor.rs-255

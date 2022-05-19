@@ -10,7 +10,7 @@ use std::{
 use tokio::{net::UdpSocket};
 
 const MAX_DATAGRAM_SIZE: usize = 1350;
-const HTTP_REQ_STREAM_ID: u64 = 4;
+const HTTP_REQ_STREAM_ID: u64 = 128;
 pub const USER_AGENT: &[u8] = b"quiche-http3-integration-client";
 pub struct Client {
     socket: UdpSocket,
@@ -42,15 +42,16 @@ impl Client {
     }
 
     pub async fn run(&mut self, interval: &mut tokio::time::Interval) {
-        let mut buf = [0; 65535];
         let mut out = [0; MAX_DATAGRAM_SIZE];
         
         loop {
+            let mut buf = [0; 65535];
+
             tokio::select! {
                 res = self.socket.recv(&mut buf) => {
                     if let Ok(value) = res {
                         // sock.connect(peer_address).await?;
-                        self.handle_response(value, &mut buf.clone()).await;
+                        self.handle_response(value, &mut buf).await;
                     }
                 }
                 _time = interval.tick() => {
@@ -94,7 +95,6 @@ impl Client {
             return;
         }
         let recv_info = quiche::RecvInfo { from: self.peer_address };
-        info!("Received info {:?}", recv_info);
     
         let t = self.connection.recv(&mut buf[..value], recv_info).unwrap();
         info!("{:?} bytes received from {:?}", t, recv_info.from);
@@ -118,10 +118,12 @@ impl Client {
             // For now, we're not using yet.
         }
         for s in self.connection.readable() {
+            error!("STREAM_ID = {}", s);
             let mut output = BufWriter::new(std::fs::OpenOptions::new()
                     .append(true)
                     .open("./output.txt")
                     .expect("Failed opening file"));
+
             while let Ok((read, fin)) = self.connection.stream_recv(s, buf) {
                 warn!("received {} bytes", read);
     
@@ -133,19 +135,20 @@ impl Client {
                     std::str::from_utf8_unchecked(stream_buf)
                 });
     
-                let _ = output.write(stream_buf);
+                let written = output.write(stream_buf).unwrap();
+                warn!("Wrote {} bytes to file", written);
                 // The server reported that it has no more data to send, which
                 // we got the full response. Close the connection.
                 if s == HTTP_REQ_STREAM_ID && fin {
-                    info!(
+                    warn!(
                         "response received in, closing...",
                         // req_start.elapsed()
                     );
     
                     self.connection.close(true, 0x00, b"kthxbye").unwrap();
                 }
+                
             }
-            output.flush().unwrap();
         }
     }
     
@@ -165,13 +168,13 @@ async fn main() -> io::Result<()> {
     //     .set_application_protos(b"\x0ahq-interop\x05hq-29\x05hq-28\x05hq-27\x08http/0.9")
     //     .unwrap();
 
-    config.set_max_idle_timeout(2000);
+    config.set_max_idle_timeout(10000);
     config.set_max_recv_udp_payload_size(MAX_DATAGRAM_SIZE);
     config.set_max_send_udp_payload_size(MAX_DATAGRAM_SIZE);
-    config.set_initial_max_data(1_000_000);
-    config.set_initial_max_stream_data_uni(10_000_000);
-    config.set_initial_max_stream_data_bidi_local(1_000_000);
-    config.set_initial_max_stream_data_bidi_remote(1_000_000);
+    config.set_initial_max_data(10_000_000);
+    // config.set_initial_max_stream_data_uni(10_000_000);
+    config.set_initial_max_stream_data_bidi_local(10_000_000);
+    // config.set_initial_max_stream_data_bidi_remote(10_000_000);
     config.set_initial_max_streams_bidi(1000);
     config.set_initial_max_streams_uni(1000);
     config.set_disable_active_migration(true);

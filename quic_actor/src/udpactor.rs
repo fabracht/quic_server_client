@@ -276,46 +276,14 @@ impl StreamHandler<Result<(bytes::BytesMut, std::net::SocketAddr), std::io::Erro
                                     stream_buf.len(),
                                     fin
                                 );
-                                // let mut bclient = client.value().clone();
                                 handle_stream(&mut client, s, stream_buf, "./");
                             }
                         }
                     }
-                    // Generate outgoing QUIC packets for all active connections and send
-                    // them on the UDP socket, until quiche reports that there are no more
-                    // packets to be sent.
-                    
                 };
 
                 for mut client_ref in self.clients.iter_mut() {
-                    if client_ref.conn.is_in_early_data() || client_ref.conn.is_established() {
-                        trace!("Connection is Established");
-
-                        // Handle writable streams.
-                        for stream_id in client_ref.conn.writable() {
-                            handle_writable(&mut client_ref, stream_id);
-                        }
-
-                        // Process all readable streams.
-                        for s in client_ref.conn.readable() {
-                            trace!("Client connection is readable");
-                            while let Ok((read, fin)) = client_ref.conn.stream_recv(s, &mut pkt_buf) {
-                                warn!("{} received {} bytes", client_ref.conn.trace_id(), read);
-
-                                let stream_buf = &pkt_buf[..read];
-
-                                info!(
-                                    "{} stream {} has {} bytes (fin? {})",
-                                    client_ref.conn.trace_id(),
-                                    s,
-                                    stream_buf.len(),
-                                    fin
-                                );
-                                // let mut bclient = client.value().clone();
-                                handle_stream(&mut client_ref, s, stream_buf, "./");
-                            }
-                        }
-                    }
+                    handle_early_established(&mut client_ref, pkt_buf);
                     loop {
                         // let client = client_ref.value_mut();
                         let (write, send_info) = match client_ref.conn.send(&mut pkt_buf) {
@@ -346,6 +314,37 @@ impl StreamHandler<Result<(bytes::BytesMut, std::net::SocketAddr), std::io::Erro
             }
             Err(_e) => {
                 ctx.stop();
+            }
+        }
+    }
+}
+
+fn handle_early_established(client_ref: &mut dashmap::mapref::multiple::RefMutMulti<ConnectionId, Client>, mut pkt_buf: &mut [u8]) {
+    if client_ref.conn.is_in_early_data() || client_ref.conn.is_established() {
+        trace!("Connection is Established");
+
+        // Handle writable streams.
+        for stream_id in client_ref.conn.writable() {
+            handle_writable(client_ref, stream_id);
+        }
+
+        // Process all readable streams.
+        for s in client_ref.conn.readable() {
+            trace!("Client connection is readable");
+            while let Ok((read, fin)) = client_ref.conn.stream_recv(s, &mut pkt_buf) {
+                warn!("{} received {} bytes", client_ref.conn.trace_id(), read);
+
+                let stream_buf = &pkt_buf[..read];
+
+                info!(
+                    "{} stream {} has {} bytes (fin? {})",
+                    client_ref.conn.trace_id(),
+                    s,
+                    stream_buf.len(),
+                    fin
+                );
+                // let mut bclient = client.value().clone();
+                handle_stream(client_ref, s, stream_buf, "./");
             }
         }
     }
@@ -488,7 +487,10 @@ fn handle_writable(client: &mut Client, stream_id: u64) {
     let resp = client.partial_responses.get_mut(&stream_id).unwrap();
     let body = &resp.body[resp.written..];
     warn!("There's still {} bytes to write", body.len());
-    let written = match conn.stream_send(stream_id, body, true) {
+    info!("Unsafe stream is {}", unsafe {
+        std::str::from_utf8_unchecked(body)
+    });
+    let written = match conn.stream_send(stream_id, body, false) {
         Ok(v) => v,
 
         Err(quiche::Error::Done) => 0,
