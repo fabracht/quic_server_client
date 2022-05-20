@@ -21,6 +21,7 @@ This project is my try at writing a client/server application using QUIC. Curren
 * The client starts and sends a "GET" (not really a get, more like a string with the GET word in it) with a filename in the PATH of the request (currently [LONG_README.md](./LONG_README.md))
 * The server reads the file and sends it back to the client
 * The client saves the content in to a local file named [output.txt](./output.txt)
+    * The current behavior is to append to the file, so don't forget to cleanup between runs
 
 
 # Current problems
