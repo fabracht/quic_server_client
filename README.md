@@ -13,3 +13,16 @@ cargo run --bin quic-actor
 ```bash
 cargo run --bin udp-client
 ```
+
+# What this project is about
+This project is my try at writing a client/server application using QUIC. Currently, the application does the following:
+
+* The server starts listening on localhost:4480
+* The client starts and sends a "GET" (not really a get, more like a string with the GET word in it) with a filename in the PATH of the request (currently [LONG_README.md](./LONG_README.md))
+* The server reads the file and sends it back to the client
+* The client saves the content in to a local file named [output.txt](./output.txt)
+
+
+# Current problems
+Buffer sizes seem to be important for a proper communication. Right now, only a part of the file is saved. Playing with the buffer values will produce different file sizes.
+I'm trying to find a solution to this problem. If you have any, don't hesitate to contact me, or, preferably, answer the issue [here](https://github.com/cloudflare/quiche/issues/1230)

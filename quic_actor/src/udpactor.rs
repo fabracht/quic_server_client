@@ -114,8 +114,12 @@ impl Actor for UdpServerActor {
         let socket = Arc::clone(&self.sink_write);
         let _address = socket.local_addr();
 
-        ctx.run_interval(Duration::from_millis(5000), |a, _c| {
-            a.clients.retain(|id, c| {
+        ctx.run_interval(Duration::from_millis(500), |a, _c| {
+            for mut client in a.clients.iter_mut() {
+                client.conn.on_timeout();
+            }
+
+            a.clients.retain(|_id, c| {
                 // info!("Collecting garbage from {:?}", id);
                 if c.conn.is_closed() {
                     error!(
@@ -297,12 +301,14 @@ impl StreamHandler<Result<(bytes::BytesMut, std::net::SocketAddr), std::io::Erro
                 for mut client_ref in self.clients.iter_mut() {
                     warn!("Handling early established");
                     handle_early_established(&mut client_ref, pkt_buf);
+                    warn!("Stream capacity is {:?}", client_ref.conn.stream_capacity(128));
                     loop {
                         // let client = client_ref.value_mut();
                         let (write, send_info) = match client_ref.conn.send(&mut pkt_buf) {
                             Ok(v) => v,
 
                             Err(quiche::Error::Done) => {
+                                warn!("QUEUE LEN: {}", client_ref.conn.dgram_send_queue_len());
                                 error!("{} done writing", client_ref.conn.trace_id());
                                 break;
                             }
@@ -509,6 +515,7 @@ fn handle_writable(client: &mut Client, stream_id: u64) -> usize {
     // info!("Unsafe stream is {}", unsafe {
     //     std::str::from_utf8_unchecked(body)
     // });
+    
     let written = match conn.stream_send(stream_id, body, false) {
         Ok(v) => v,
 
@@ -527,6 +534,10 @@ fn handle_writable(client: &mut Client, stream_id: u64) -> usize {
 
     if resp.written == resp.body.len() {
         client.partial_responses.remove(&stream_id);
+        let stats = conn.stats();
+        let q = conn.send_quantum();
+        warn!("QUANTUM: {:?}", q);
+        conn.stream_send(stream_id, &mut [0;0], true).ok();
     }
     written
 }

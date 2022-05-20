@@ -8,7 +8,7 @@ use ring::rand::SystemRandom;
 use crate::udpactor::UdpServerActor;
 
 mod udpactor;
-const MAX_DATAGRAM_SIZE: usize = 1350;
+const MAX_DATAGRAM_SIZE: usize = 65527;
 fn main() -> Result<(), Box<dyn Error + Sync + Send + 'static>> {
     ////////////////////////////////////////////////////////////////////////////
     std::env::set_var("RUST_LOG", "trace");
@@ -19,24 +19,26 @@ fn main() -> Result<(), Box<dyn Error + Sync + Send + 'static>> {
     log4rs::init_file("./logging_config.yaml", Default::default()).unwrap();
     let system = actix_rt::System::new();
     let mut config = quiche::Config::new(quiche::PROTOCOL_VERSION)?;
-
     config.load_cert_chain_from_pem_file("./cert.pem")?;
     config.load_priv_key_from_pem_file("./key.pem")?;
-    config.set_max_recv_udp_payload_size(MAX_DATAGRAM_SIZE);
-    config.set_max_send_udp_payload_size(MAX_DATAGRAM_SIZE);
+    
+    config.verify_peer(false);
     // config.set_application_protos(b"\x0ahq-interop\x05hq-29\x05hq-28\x05hq-27\x08http/0.9")?;
     config.set_application_protos(quiche::h3::APPLICATION_PROTOCOL)?;
+
+    // config.set_max_recv_udp_payload_size(MAX_DATAGRAM_SIZE);
+    // config.set_max_send_udp_payload_size(MAX_DATAGRAM_SIZE);
     config.set_max_idle_timeout(10000);
-    config.verify_peer(false);
     config.set_initial_max_data(MAX_DATAGRAM_SIZE as u64);
-    config.set_initial_max_stream_data_bidi_local(10_000_000);
-    config.set_initial_max_stream_data_bidi_remote(10_000_000);
-    config.set_initial_max_stream_data_uni(10_000_000);
-    config.set_initial_max_streams_bidi(1000);
-    config.set_initial_max_streams_uni(1000);
+    config.set_initial_max_stream_data_uni(MAX_DATAGRAM_SIZE as u64);
+    config.set_initial_max_stream_data_bidi_local(MAX_DATAGRAM_SIZE as u64);
+    config.set_initial_max_stream_data_bidi_remote(MAX_DATAGRAM_SIZE as u64);
+    config.set_initial_max_streams_bidi(100);
+    config.set_initial_max_streams_uni(100);
     config.set_disable_active_migration(false);
+    
     config.enable_early_data();
-    config.enable_dgram(true, 1000, 1000);
+    config.enable_dgram(true, 100, 100);
     let _rng = SystemRandom::new();
 
     let (tx, mut rx) = tokio::sync::mpsc::channel::<Addr<UdpServerActor>>(1024);

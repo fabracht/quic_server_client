@@ -7,9 +7,9 @@ use std::{
     pin::Pin,
     time::Duration,
 };
-use tokio::{net::UdpSocket};
+use tokio::{net::UdpSocket, time::MissedTickBehavior};
 
-const MAX_DATAGRAM_SIZE: usize = 1350;
+const MAX_DATAGRAM_SIZE: usize = 65527;
 const HTTP_REQ_STREAM_ID: u64 = 128;
 pub const USER_AGENT: &[u8] = b"quiche-http3-integration-client";
 pub struct Client {
@@ -45,12 +45,11 @@ impl Client {
         let mut out = [0; MAX_DATAGRAM_SIZE];
         
         loop {
-            let mut buf = [0; 65535];
+            let mut buf = [0; MAX_DATAGRAM_SIZE];
 
             tokio::select! {
                 res = self.socket.recv(&mut buf) => {
                     if let Ok(value) = res {
-                        // sock.connect(peer_address).await?;
                         self.handle_response(value, &mut buf).await;
                     }
                 }
@@ -73,9 +72,7 @@ impl Client {
                         },
                     };
                     info!("Sending {}, with info: {:?}", write, send_info);
-                    let _e = self.socket.send_to(&out[..write], &send_info.to).await;
-                    // interval.reset();
-                    
+                    let _e = self.socket.send_to(&out[..write], &send_info.to).await;                    
                 }
                 _message = &mut self.rx => {
                     break;
@@ -139,6 +136,7 @@ impl Client {
                 warn!("Wrote {} bytes to file", written);
                 // The server reported that it has no more data to send, which
                 // we got the full response. Close the connection.
+                warn!("STREAM ID: {} is FIN? {}", s, fin);
                 if s == HTTP_REQ_STREAM_ID && fin {
                     warn!(
                         "response received in, closing...",
@@ -160,38 +158,42 @@ async fn main() -> io::Result<()> {
     log4rs::init_file("./logging_config.yaml", Default::default()).unwrap();
 
     let mut config = quiche::Config::new(quiche::PROTOCOL_VERSION).unwrap();
+    config.load_cert_chain_from_pem_file("./cert.pem").unwrap();
+    config.load_priv_key_from_pem_file("./key.pem").unwrap();
+    
     config.verify_peer(false);
-    config
-        .set_application_protos(quiche::h3::APPLICATION_PROTOCOL)
-        .unwrap();
     // config
     //     .set_application_protos(b"\x0ahq-interop\x05hq-29\x05hq-28\x05hq-27\x08http/0.9")
     //     .unwrap();
-
+    config
+    .set_application_protos(quiche::h3::APPLICATION_PROTOCOL)
+        .unwrap();
+    
+    // config.set_max_recv_udp_payload_size(MAX_DATAGRAM_SIZE);
+    // config.set_max_send_udp_payload_size(MAX_DATAGRAM_SIZE);
     config.set_max_idle_timeout(10000);
-    config.set_max_recv_udp_payload_size(MAX_DATAGRAM_SIZE);
-    config.set_max_send_udp_payload_size(MAX_DATAGRAM_SIZE);
-    config.set_initial_max_data(10_000_000);
-    // config.set_initial_max_stream_data_uni(10_000_000);
-    config.set_initial_max_stream_data_bidi_local(10_000_000);
-    // config.set_initial_max_stream_data_bidi_remote(10_000_000);
-    config.set_initial_max_streams_bidi(1000);
-    config.set_initial_max_streams_uni(1000);
-    config.set_disable_active_migration(true);
+    config.set_initial_max_data(MAX_DATAGRAM_SIZE as u64);
+    config.set_initial_max_stream_data_uni(MAX_DATAGRAM_SIZE as u64);
+    config.set_initial_max_stream_data_bidi_local(MAX_DATAGRAM_SIZE as u64);
+    config.set_initial_max_stream_data_bidi_remote(MAX_DATAGRAM_SIZE as u64);
+    
+    config.set_initial_max_streams_bidi(100);
+    config.set_initial_max_streams_uni(100);
+    
+    config.set_disable_active_migration(false);
+    config.enable_dgram(true, 100, 100);
 
     let sock = UdpSocket::bind("0.0.0.0:8080").await?;
     let peer_address = SocketAddr::new([127, 0, 0, 1].into(), 4480);
     // let peer_address = SocketAddr::new([172, 67, 9, 235].into(), 443);
-    config.load_cert_chain_from_pem_file("./cert.pem").unwrap();
-    config.load_priv_key_from_pem_file("./key.pem").unwrap();
     
     
     let (_tx, rx) = futures::channel::oneshot::channel::<ClientMessage>();
 
     let mut connection_client = Client::new(&mut config, peer_address, sock, rx);
-    let mut interval = tokio::time::interval(Duration::from_nanos(25));
+    let mut interval = tokio::time::interval(Duration::from_nanos(1));
     // let _result = tx.send(ClientMessage::Shutdown);
-
+    interval.set_missed_tick_behavior(MissedTickBehavior::Delay);
     connection_client.run(&mut interval).await;
     Ok(())
 }
