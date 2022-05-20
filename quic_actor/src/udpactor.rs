@@ -147,7 +147,7 @@ impl StreamHandler<Result<(bytes::BytesMut, std::net::SocketAddr), std::io::Erro
                 let len = message.len();
 
                 let mut pkt_buf = &mut message[..len];
-                
+
                 let header_option =
                     match quiche::Header::from_slice(pkt_buf, quiche::MAX_CONN_ID_LEN) {
                         Ok(v) => Some(v),
@@ -301,7 +301,10 @@ impl StreamHandler<Result<(bytes::BytesMut, std::net::SocketAddr), std::io::Erro
                 for mut client_ref in self.clients.iter_mut() {
                     warn!("Handling early established");
                     handle_early_established(&mut client_ref, pkt_buf);
-                    warn!("Stream capacity is {:?}", client_ref.conn.stream_capacity(128));
+                    warn!(
+                        "Stream capacity is {:?}",
+                        client_ref.conn.stream_capacity(128)
+                    );
                     loop {
                         // let client = client_ref.value_mut();
                         let (write, send_info) = match client_ref.conn.send(&mut pkt_buf) {
@@ -515,7 +518,7 @@ fn handle_writable(client: &mut Client, stream_id: u64) -> usize {
     // info!("Unsafe stream is {}", unsafe {
     //     std::str::from_utf8_unchecked(body)
     // });
-    
+
     let written = match conn.stream_send(stream_id, body, false) {
         Ok(v) => v,
 
@@ -537,7 +540,7 @@ fn handle_writable(client: &mut Client, stream_id: u64) -> usize {
         let stats = conn.stats();
         let q = conn.send_quantum();
         warn!("QUANTUM: {:?}", q);
-        conn.stream_send(stream_id, &mut [0;0], true).ok();
+        conn.stream_send(stream_id, &mut [0; 0], true).ok();
     }
     written
 }
