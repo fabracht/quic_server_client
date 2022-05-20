@@ -3,7 +3,7 @@ mod messages;
 
 use actix::io::SinkWrite;
 use actix::{Actor, ActorContext, Addr, AsyncContext, Context, StreamHandler};
-use bytes::BufMut;
+
 use dashmap::DashMap;
 use quiche::ConnectionId;
 use ring::hmac::Key;
@@ -23,7 +23,7 @@ use tokio::net::UdpSocket;
 use tokio_util::codec::{self};
 use tokio_util::udp::UdpFramed;
 
-use crate::MAX_DATAGRAM_SIZE;
+
 #[allow(dead_code)]
 type UdpSink = SinkWrite<
     (bytes::BytesMut, SocketAddr),
@@ -537,7 +537,7 @@ fn handle_writable(client: &mut Client, stream_id: u64) -> usize {
 
     if resp.written == resp.body.len() {
         client.partial_responses.remove(&stream_id);
-        let stats = conn.stats();
+        let _stats = conn.stats();
         let q = conn.send_quantum();
         warn!("QUANTUM: {:?}", q);
         conn.stream_send(stream_id, &mut [0; 0], true).ok();
