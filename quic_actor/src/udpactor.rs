@@ -79,7 +79,7 @@ impl UdpServerActor {
         let out = Vec::from(pkt_buf);
         let fut = async move {
             match sink_clone.send_to(&out[..len], socket_address).await {
-                Ok(v) => error!("Successfuly sent {} bytes", v),
+                Ok(v) => info!("Successfuly sent {} bytes", v),
                 Err(e) => {
                     if e.kind() == std::io::ErrorKind::WouldBlock {
                         debug!("send() would block");
@@ -268,9 +268,9 @@ impl StreamHandler<Result<(bytes::BytesMut, std::net::SocketAddr), std::io::Erro
                             return;
                         }
                     };
-                    info!("{} processed {} bytes", client.conn.trace_id(), read);
+                    // info!("{} processed {} bytes", client.conn.trace_id(), read);
                     if client.conn.is_in_early_data() || client.conn.is_established() {
-                        trace!("Connection is Established");
+                        // trace!("Connection is Established");
 
                         // Handle writable streams.
                         for stream_id in client.conn.writable() {
@@ -299,9 +299,9 @@ impl StreamHandler<Result<(bytes::BytesMut, std::net::SocketAddr), std::io::Erro
                 };
 
                 for mut client_ref in self.clients.iter_mut() {
-                    warn!("Handling early established");
+                    // warn!("Handling early established");
                     handle_early_established(&mut client_ref, pkt_buf);
-                    warn!(
+                    info!(
                         "Stream capacity is {:?}",
                         client_ref.conn.stream_capacity(128)
                     );
@@ -311,8 +311,8 @@ impl StreamHandler<Result<(bytes::BytesMut, std::net::SocketAddr), std::io::Erro
                             Ok(v) => v,
 
                             Err(quiche::Error::Done) => {
-                                warn!("QUEUE LEN: {}", client_ref.conn.dgram_send_queue_len());
-                                error!("{} done writing", client_ref.conn.trace_id());
+                                // warn!("QUEUE LEN: {}", client_ref.conn.dgram_send_queue_len());
+                                // error!("{} done writing", client_ref.conn.trace_id());
                                 break;
                             }
 
@@ -347,7 +347,7 @@ fn handle_early_established(
     mut pkt_buf: &mut [u8],
 ) {
     if client_ref.conn.is_in_early_data() || client_ref.conn.is_established() {
-        trace!("Connection is Established");
+        // trace!("Connection is Established");
 
         // Handle writable streams.
         for stream_id in client_ref.conn.writable() {

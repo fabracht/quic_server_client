@@ -10,8 +10,8 @@ use crate::udpactor::UdpServerActor;
 mod udpactor;
 const MAX_DATAGRAM_SIZE: usize = 1350;
 const MAX_UDP_PAYLOAD: usize = 65527;
-const MAX_DATA: usize = 5242880;
-const MAX_STREAM_DATA: usize = 1048576;
+const MAX_DATA: usize = 10485760;
+const MAX_STREAM_DATA: usize = 5242880;
 fn main() -> Result<(), Box<dyn Error + Sync + Send + 'static>> {
     ////////////////////////////////////////////////////////////////////////////
     std::env::set_var("RUST_LOG", "trace");

@@ -11,6 +11,7 @@ use tokio::{net::UdpSocket, time::MissedTickBehavior};
 
 const MAX_DATAGRAM_SIZE: usize = 65527;
 const MAX_DATA: usize = 10485760;
+const MAX_STREAM_DATA: usize = 10485760;
 const HTTP_REQ_STREAM_ID: u64 = 128;
 pub const USER_AGENT: &[u8] = b"quiche-http3-integration-client";
 pub struct Client {
@@ -74,7 +75,7 @@ impl Client {
                             break;
                         },
                     };
-                    info!("Sending {}, with info: {:?}", write, send_info);
+                    // info!("Sending {}, with info: {:?}", write, send_info);
                     let _e = self.socket.send_to(&out[..write], &send_info.to).await;
                 }
                 _message = &mut self.rx => {
@@ -95,11 +96,11 @@ impl Client {
         };
 
         let t = self.connection.recv(&mut buf[..value], recv_info).unwrap();
-        info!("{:?} bytes received from {:?}", t, recv_info.from);
+        // info!("{:?} bytes received from {:?}", t, recv_info.from);
         let _p = self.peer_address.ip().to_string();
         #[allow(unused_assignments)]
         if self.connection.is_established() && !self.req_sent {
-            error!("sending HTTP request for {}", recv_info.from);
+            // error!("sending HTTP request for {}", recv_info.from);
             let mut req = format!("GET {}/LONG_README.md\r\n", recv_info.from).into_bytes();
 
             let mut buf = vec![0; MAX_DATAGRAM_SIZE];
@@ -116,7 +117,7 @@ impl Client {
             // For now, we're not using yet.
         }
         for s in self.connection.readable() {
-            error!("STREAM_ID = {}", s);
+            // error!("STREAM_ID = {}", s);
             let mut output = BufWriter::new(
                 std::fs::OpenOptions::new()
                     .append(true)
@@ -125,21 +126,21 @@ impl Client {
             );
 
             while let Ok((read, fin)) = self.connection.stream_recv(s, buf) {
-                warn!("received {} bytes", read);
+                // warn!("received {} bytes", read);
 
                 let stream_buf = &buf[..read];
 
-                info!("stream {} has {} bytes (fin? {})", s, stream_buf.len(), fin);
+                // info!("stream {} has {} bytes (fin? {})", s, stream_buf.len(), fin);
 
-                info!("Unsafe stream is {}", unsafe {
-                    std::str::from_utf8_unchecked(stream_buf)
-                });
+                // info!("Unsafe stream is {}", unsafe {
+                //     std::str::from_utf8_unchecked(stream_buf)
+                // });
 
                 let written = output.write(stream_buf).unwrap();
-                warn!("Wrote {} bytes to file", written);
+                info!("Wrote {} bytes to file", written);
                 // The server reported that it has no more data to send, which
                 // we got the full response. Close the connection.
-                warn!("STREAM ID: {} is FIN? {}", s, fin);
+                // warn!("STREAM ID: {} is FIN? {}", s, fin);
                 if s == HTTP_REQ_STREAM_ID && fin {
                     warn!(
                         "response received in, closing...",
@@ -173,9 +174,9 @@ async fn main() -> io::Result<()> {
     config.set_max_send_udp_payload_size(1350);
     config.set_max_idle_timeout(10000);
     config.set_initial_max_data(MAX_DATA as u64);
-    config.set_initial_max_stream_data_uni(MAX_DATA as u64);
-    config.set_initial_max_stream_data_bidi_local(MAX_DATA as u64);
-    config.set_initial_max_stream_data_bidi_remote(MAX_DATA as u64);
+    config.set_initial_max_stream_data_uni(MAX_STREAM_DATA as u64);
+    config.set_initial_max_stream_data_bidi_local(MAX_STREAM_DATA as u64);
+    config.set_initial_max_stream_data_bidi_remote(MAX_STREAM_DATA as u64);
 
     config.set_initial_max_streams_bidi(10);
     config.set_initial_max_streams_uni(10);
