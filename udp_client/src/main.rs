@@ -10,11 +10,12 @@ use std::{
 use tokio::{net::UdpSocket, time::MissedTickBehavior};
 
 const MAX_DATAGRAM_SIZE: usize = 65527;
+const MAX_DATA: usize = 10485760;
 const HTTP_REQ_STREAM_ID: u64 = 128;
 pub const USER_AGENT: &[u8] = b"quiche-http3-integration-client";
 pub struct Client {
     socket: UdpSocket,
-    connection: Pin<Box<Connection>>,
+    connection: Connection,
     peer_address: SocketAddr,
     req_sent: bool,
     rx: futures::channel::oneshot::Receiver<ClientMessage>,
@@ -62,12 +63,10 @@ impl Client {
                         Ok(v) => {
                             v
                         },
-
                         Err(quiche::Error::Done) => {
-                            debug!("done writing");
+                            // debug!("done writing");
                             continue;
                         },
-
                         Err(e) => {
                             error!("send failed: {:?}", e);
 
@@ -156,7 +155,7 @@ impl Client {
 
 #[tokio::main]
 async fn main() -> io::Result<()> {
-    log4rs::init_file("./logging_config.yaml", Default::default()).unwrap();
+    log4rs::init_file("./logging_config_client.yaml", Default::default()).unwrap();
 
     let mut config = quiche::Config::new(quiche::PROTOCOL_VERSION).unwrap();
     config.load_cert_chain_from_pem_file("./cert.pem").unwrap();
@@ -170,17 +169,17 @@ async fn main() -> io::Result<()> {
         .set_application_protos(quiche::h3::APPLICATION_PROTOCOL)
         .unwrap();
 
-    // config.set_max_recv_udp_payload_size(MAX_DATAGRAM_SIZE);
-    // config.set_max_send_udp_payload_size(MAX_DATAGRAM_SIZE);
+    config.set_max_recv_udp_payload_size(MAX_DATAGRAM_SIZE);
+    config.set_max_send_udp_payload_size(1350);
     config.set_max_idle_timeout(10000);
-    config.set_initial_max_data(MAX_DATAGRAM_SIZE as u64);
-    config.set_initial_max_stream_data_uni(MAX_DATAGRAM_SIZE as u64);
-    config.set_initial_max_stream_data_bidi_local(MAX_DATAGRAM_SIZE as u64);
-    config.set_initial_max_stream_data_bidi_remote(MAX_DATAGRAM_SIZE as u64);
+    config.set_initial_max_data(MAX_DATA as u64);
+    config.set_initial_max_stream_data_uni(MAX_DATA as u64);
+    config.set_initial_max_stream_data_bidi_local(MAX_DATA as u64);
+    config.set_initial_max_stream_data_bidi_remote(MAX_DATA as u64);
 
-    config.set_initial_max_streams_bidi(100);
-    config.set_initial_max_streams_uni(100);
-
+    config.set_initial_max_streams_bidi(10);
+    config.set_initial_max_streams_uni(10);
+    
     config.set_disable_active_migration(false);
     config.enable_dgram(true, 100, 100);
 
